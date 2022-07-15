@@ -1,0 +1,61 @@
+{
+    "name": "wayofdev/package-tpl",
+    "description": "PHP package template with GitHub Actions",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://wayof.dev",
+    "support": {
+        "issues": "https://github.com/wayofdev/php-package-tpl/issues",
+        "source": "https://github.com/wayofdev/php-package-tpl"
+    },
+    "authors": [
+        {
+            "name": "lotyp",
+            "email": "the@wayof.dev"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.28",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan": "^1.8",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.1",
+        "phpstan/phpstan-strict-rules": "^1.3",
+        "phpunit/phpunit": "^9.5",
+        "roave/security-advisories": "dev-latest",
+        "wayofdev/cs-fixer-config": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WayOfDev\\PackageTpl\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WayOfDev\\PackageTpl\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "cs-fix": "php vendor/bin/php-cs-fixer fix -v",
+        "cs-diff": "php vendor/bin/php-cs-fixer fix --dry-run -v --diff",
+        "test": "php vendor/bin/phpunit",
+        "test-cc": "php vendor/bin/phpunit --coverage-text --colors=never",
+        "stan": "php vendor/bin/phpstan analyse"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "composer-normalize": {
+            "indent-size": 4,
+            "indent-style": "space"
+        }
+    }
+}
