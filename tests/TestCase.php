@@ -15,15 +15,8 @@ abstract class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            static fn (string $modelName) => 'WayOfDev\\Laravel\\Package\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            static fn (string $modelName) => 'WayOfDev\\Laravel\\Package\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
-    }
-
-    protected function getPackageProviders($app): array
-    {
-        return [
-            PackageServiceProvider::class,
-        ];
     }
 
     public function getEnvironmentSetUp($app): void
@@ -34,5 +27,12 @@ abstract class TestCase extends Orchestra
         $migration = include __DIR__.'/../database/migrations/create_package_table.php.stub';
         $migration->up();
         */
+    }
+
+    protected function getPackageProviders($app): array
+    {
+        return [
+            PackageServiceProvider::class,
+        ];
     }
 }
