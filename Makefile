@@ -29,8 +29,11 @@ else
 	WHITE := ""
 	RST := ""
 endif
-MAKE_LOGFILE = /tmp/wayofdev-php-package-tpl.log
+MAKE_LOGFILE = /tmp/wayofdev-laravel-package-tpl.log
 MAKE_CMD_COLOR := $(BLUE)
+
+# https://phpstan.org/user-guide/output-format
+export PHPSTAN_OUTPUT_FORMAT ?= table
 
 help:
 	@echo 'Management commands for package:'
@@ -40,7 +43,7 @@ help:
 	@echo
 	@echo '    📑 Logs are stored in      $(MAKE_LOGFILE)'
 	@echo
-	@echo '    📦 Package                 php-package-tpl (github.com/wayofdev/php-package-tpl)'
+	@echo '    📦 Package                 laravel-package-tpl (github.com/wayofdev/laravel-package-tpl)'
 	@echo '    🤠 Author                  Andrij Orlenko (github.com/lotyp)'
 	@echo '    🏢 ${YELLOW}Org                     wayofdev (github.com/wayofdev)${RST}'
 .PHONY: help
@@ -73,15 +76,15 @@ cs-fix: prepare ## Fixes code to follow coding standards using php-cs-fixer
 .PHONY: cs-fix
 
 stan: ## Runs phpstan – static analysis tool
-	$(COMPOSER_RUN) stan
+	$(COMPOSER_RUN) stan --error-format=$(PHPSTAN_OUTPUT_FORMAT)
 .PHONY: stan
 
-test: ## Run project php-unit tests
+test: ## Run project php-unit and pest tests
 	$(COMPOSER_RUN) test
 .PHONY: test
 
-test-cc: ## Run project php-unit tests in coverage mode and build report
-	XDEBUG_MODE="coverage" $(COMPOSER_RUN) test-cc
+test-cc: ## Run project php-unit and pest tests in coverage mode and build report
+	$(COMPOSER_RUN) test-cc
 .PHONY: test-cc
 
 # Yaml Actions

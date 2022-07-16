@@ -12,13 +12,14 @@ on:  # yamllint disable-line rule:truthy
 
 jobs:
   integration:
-    name: Testing on PHP ${{ matrix.php }} - ${{ matrix.os }}
+    name: PHP ${{ matrix.php }} - L${{ matrix.laravel }} - ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: true
       matrix:
         os: ["ubuntu-22.04"]
         php: ["8.1"]
+        laravel: ["9.*"]
     steps:
       - name: Check out the codebase
         uses: actions/checkout@v3
@@ -31,6 +32,11 @@ jobs:
           ini-values: error_reporting=E_ALL
           tools: composer:v2
           coverage: none
+
+      - name: Setup problem matchers
+        run: |
+          echo "::add-matcher::${{ runner.tool_cache }}/php.json"
+          echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
       - name: Load cached dependencies
         id: cached-composer-dependencies
@@ -46,10 +52,12 @@ jobs:
       - name: Run coding standards task
         run: make cs-diff
 
-      - name: Execute phpunit tests
+      - name: Execute phpunit and pest tests
         run: make test
 
       - name: Run static analysis using phpstan
         run: make stan
+        env:
+          PHPSTAN_OUTPUT_FORMAT: github
 
 ...

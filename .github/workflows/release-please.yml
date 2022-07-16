@@ -18,7 +18,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
-          package-name: php-package-tpl
+          package-name: laravel-package-tpl
           default-branch: master
           changelog-types: |
             [

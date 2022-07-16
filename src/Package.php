@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WayOfDev\PackageTpl;
+namespace WayOfDev\Laravel\Package;
 
 final class Package
 {
