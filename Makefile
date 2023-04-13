@@ -84,7 +84,7 @@ stan-ci:
 .PHONY: stan-ci
 
 test: ## Run project php-unit and pest tests
-	$(COMPOSER_RUN) test
+	XDEBUG_MODE=coverage $(COMPOSER_RUN) test
 .PHONY: test
 
 test-cc: ## Run project php-unit and pest tests in coverage mode and build report
@@ -103,9 +103,3 @@ hooks: ## Install git hooks from pre-commit-config
 	pre-commit install
 	pre-commit autoupdate
 .PHONY: hooks
-
-# Docker Actions
-# ------------------------------------------------------------------------------------
-ssh: ## Login inside running docker container
-	$(DOCKER_CONNECT) sh
-.PHONY: ssh
