@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.1.0](https://github.com/wayofdev/laravel-package-tpl/compare/v1.0.0...v1.1.0) (2023-04-13)
+
+
+### Features
+
+* enable aut-merge ([cad52af](https://github.com/wayofdev/laravel-package-tpl/commit/cad52af89927500ae9320b9f2fd050d91d935dfb))
+* new github workflow ([2d4695f](https://github.com/wayofdev/laravel-package-tpl/commit/2d4695f148cbc99c9146ca2a9f8caa408825ce3a))
+
+
+### Bug Fixes
+
+* run against gh user ([95331ff](https://github.com/wayofdev/laravel-package-tpl/commit/95331ff6744dbb71af9773706f5256dfc02fbf10))
+
+
+### Miscellaneous
+
+* **deps:** update dependency phpstan/phpstan to v1.10.13 ([faba56b](https://github.com/wayofdev/laravel-package-tpl/commit/faba56bb758427db7b9a2b13da4d97ee8e3150ea))
+* **deps:** update dependency wayofdev/cs-fixer-config to v1.1.13 ([ee61cb2](https://github.com/wayofdev/laravel-package-tpl/commit/ee61cb2e0983105074cd26d195f2acc5da70d6bc))
+
 ## 1.0.0 (2022-07-16)
 
 
