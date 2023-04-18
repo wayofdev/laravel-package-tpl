@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.6](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.5...v1.1.6) (2023-04-18)
+
+
+### Miscellaneous
+
+* **deps:** update dependency pestphp/pest to v2.5.1 ([215e0f3](https://github.com/wayofdev/laravel-package-tpl/commit/215e0f30ed749f6f6d481c8eaed9d6e2f30f081a))
+
 ## [1.1.5](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.4...v1.1.5) (2023-04-18)
 
 
