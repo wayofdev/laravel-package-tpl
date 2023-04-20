@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.13](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.12...v1.1.13) (2023-04-20)
+
+
+### Miscellaneous
+
+* **deps:** update dependency nunomaduro/larastan to v2.6.0 ([ba08bf5](https://github.com/wayofdev/laravel-package-tpl/commit/ba08bf55cabc4cb198c7c23b171ab62658271b65))
+
 ## [1.1.12](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.11...v1.1.12) (2023-04-20)
 
 
