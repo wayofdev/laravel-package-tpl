@@ -6486,16 +6486,16 @@
         },
         {
             "name": "nunomaduro/larastan",
-            "version": "2.5.2",
+            "version": "v2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/larastan.git",
-                "reference": "0750017b3d3e1bbe3d0342f3777f09d0c19f91a9"
+                "reference": "ccac5b25949576807862cf32ba1fce1769c06c42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/larastan/zipball/0750017b3d3e1bbe3d0342f3777f09d0c19f91a9",
-                "reference": "0750017b3d3e1bbe3d0342f3777f09d0c19f91a9",
+                "url": "https://api.github.com/repos/nunomaduro/larastan/zipball/ccac5b25949576807862cf32ba1fce1769c06c42",
+                "reference": "ccac5b25949576807862cf32ba1fce1769c06c42",
                 "shasum": ""
             },
             "require": {
@@ -6558,7 +6558,7 @@
             ],
             "support": {
                 "issues": "https://github.com/nunomaduro/larastan/issues",
-                "source": "https://github.com/nunomaduro/larastan/tree/2.5.2"
+                "source": "https://github.com/nunomaduro/larastan/tree/v2.6.0"
             },
             "funding": [
                 {
@@ -6578,7 +6578,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2023-04-11T19:26:46+00:00"
+            "time": "2023-04-20T12:40:01+00:00"
         },
         {
             "name": "orchestra/testbench",
