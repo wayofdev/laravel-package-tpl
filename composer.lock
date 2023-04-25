@@ -2307,16 +2307,16 @@
         },
         {
             "name": "spatie/laravel-package-tools",
-            "version": "1.14.2",
+            "version": "1.14.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-package-tools.git",
-                "reference": "bab62023a4745a61170ad5424184533685e73c2d"
+                "reference": "42737fa494578e539eeba59c27a6e23ea8ddda4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/bab62023a4745a61170ad5424184533685e73c2d",
-                "reference": "bab62023a4745a61170ad5424184533685e73c2d",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/42737fa494578e539eeba59c27a6e23ea8ddda4d",
+                "reference": "42737fa494578e539eeba59c27a6e23ea8ddda4d",
                 "shasum": ""
             },
             "require": {
@@ -2355,7 +2355,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-package-tools/issues",
-                "source": "https://github.com/spatie/laravel-package-tools/tree/1.14.2"
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.14.3"
             },
             "funding": [
                 {
@@ -2363,7 +2363,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-14T16:41:21+00:00"
+            "time": "2023-04-25T14:17:59+00:00"
         },
         {
             "name": "symfony/console",
