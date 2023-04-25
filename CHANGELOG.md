@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.18](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.17...v1.1.18) (2023-04-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency spatie/laravel-package-tools to v1.14.3 ([f328fbe](https://github.com/wayofdev/laravel-package-tpl/commit/f328fbe9bc5686721f6681117bf8820b03099018))
+
 ## [1.1.17](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.16...v1.1.17) (2023-04-25)
 
 
