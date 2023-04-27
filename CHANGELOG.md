@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.19](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.18...v1.1.19) (2023-04-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency spatie/laravel-package-tools to v1.15.0 ([f5c4389](https://github.com/wayofdev/laravel-package-tpl/commit/f5c43890cfa15b6a759dbe979bc49bcfa9f78b19))
+
 ## [1.1.18](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.17...v1.1.18) (2023-04-25)
 
 
