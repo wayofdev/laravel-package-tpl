@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.20](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.19...v1.1.20) (2023-04-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency nunomaduro/collision to v7.5.2 ([f05ab29](https://github.com/wayofdev/laravel-package-tpl/commit/f05ab290cf39ed0e14eb200592db9a28e9295cb1))
+
 ## [1.1.19](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.18...v1.1.19) (2023-04-27)
 
 
