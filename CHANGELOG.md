@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.21](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.20...v1.1.21) (2023-05-01)
+
+
+### Miscellaneous
+
+* **deps:** update dependency phpunit/phpunit to v10.1.2 ([aff909f](https://github.com/wayofdev/laravel-package-tpl/commit/aff909f430c31160c5fdd7c0c4eee5c7bb3ebfb1))
+
 ## [1.1.20](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.19...v1.1.20) (2023-04-28)
 
 
