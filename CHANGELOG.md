@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.28](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.27...v1.1.28) (2023-05-11)
+
+
+### Miscellaneous
+
+* **deps:** update dependency phpunit/phpunit to v10.1.3 ([8e3baac](https://github.com/wayofdev/laravel-package-tpl/commit/8e3baac01881078ff0b33bc3930912a50654a09b))
+* **deps:** update dependency wayofdev/cs-fixer-config to v1.2.2 ([b177302](https://github.com/wayofdev/laravel-package-tpl/commit/b17730256d4c50d63cc405f5f9d87bbff043a4a5))
+
 ## [1.1.27](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.26...v1.1.27) (2023-05-09)
 
 
