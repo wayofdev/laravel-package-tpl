@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.32](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.31...v1.1.32) (2023-05-23)
+
+
+### Miscellaneous
+
+* **deps:** update dependency phpstan/phpstan-phpunit to v1.3.12 ([98c67f2](https://github.com/wayofdev/laravel-package-tpl/commit/98c67f20fbdadfc2c3f4d705285e3d1c0f5c2281))
+
 ## [1.1.31](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.30...v1.1.31) (2023-05-23)
 
 
