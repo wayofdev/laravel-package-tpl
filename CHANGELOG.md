@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.35](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.34...v1.1.35) (2023-05-24)
+
+
+### Miscellaneous
+
+* **deps:** update dependency phpstan/extension-installer to v1.3.1 ([90887f1](https://github.com/wayofdev/laravel-package-tpl/commit/90887f1c24a454bae351ff680a5cf98f15574b9a))
+
 ## [1.1.34](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.33...v1.1.34) (2023-05-24)
 
 
