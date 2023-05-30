@@ -57,10 +57,10 @@ jobs:
           PHP_CS_FIXER_IGNORE_ENV: true
 
       - name: 🧪 Execute phpunit and pest tests
-        run: make test
+        run: composer test:cc
 
       - name: 🔍 Run static analysis using phpstan
-        run: make stan-ci
+        run: composer stan:ci
 
       - name: 📤 Upload coverage report to Codecov
         uses: codecov/codecov-action@v3
