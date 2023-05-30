@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2749aec506107bef2680fb9e1aa96c1b",
+    "content-hash": "99c18f45c183ea8d12df0c429ffde5d4",
     "packages": [
         {
             "name": "brick/math",
@@ -2365,66 +2365,6 @@
                 }
             ],
             "time": "2023-04-15T23:01:58+00:00"
-        },
-        {
-            "name": "spatie/laravel-package-tools",
-            "version": "1.15.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/laravel-package-tools.git",
-                "reference": "efab1844b8826443135201c4443690f032c3d533"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/efab1844b8826443135201c4443690f032c3d533",
-                "reference": "efab1844b8826443135201c4443690f032c3d533",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "^9.28|^10.0",
-                "php": "^8.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.5",
-                "orchestra/testbench": "^7.7|^8.0",
-                "pestphp/pest": "^1.22",
-                "phpunit/phpunit": "^9.5.24",
-                "spatie/pest-plugin-test-time": "^1.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\LaravelPackageTools\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Tools for creating Laravel packages",
-            "homepage": "https://github.com/spatie/laravel-package-tools",
-            "keywords": [
-                "laravel-package-tools",
-                "spatie"
-            ],
-            "support": {
-                "issues": "https://github.com/spatie/laravel-package-tools/issues",
-                "source": "https://github.com/spatie/laravel-package-tools/tree/1.15.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/spatie",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-04-27T08:09:01+00:00"
         },
         {
             "name": "symfony/console",
@@ -6582,22 +6522,22 @@
         },
         {
             "name": "orchestra/testbench",
-            "version": "v8.5.4",
+            "version": "v8.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench.git",
-                "reference": "6c00e046147d7ce1586f279e87139217aaa04bab"
+                "reference": "f319dc0f866fcedde621e1150485d4e40516e88d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/6c00e046147d7ce1586f279e87139217aaa04bab",
-                "reference": "6c00e046147d7ce1586f279e87139217aaa04bab",
+                "url": "https://api.github.com/repos/orchestral/testbench/zipball/f319dc0f866fcedde621e1150485d4e40516e88d",
+                "reference": "f319dc0f866fcedde621e1150485d4e40516e88d",
                 "shasum": ""
             },
             "require": {
                 "composer-runtime-api": "^2.2",
                 "fakerphp/faker": "^1.21",
-                "laravel/framework": ">=10.8.0 <10.13.0",
+                "laravel/framework": ">=10.8.0 <10.14.0",
                 "mockery/mockery": "^1.5.1",
                 "orchestra/testbench-core": ">=8.5.0 <8.6.0",
                 "php": "^8.1",
@@ -6631,9 +6571,9 @@
             ],
             "support": {
                 "issues": "https://github.com/orchestral/testbench/issues",
-                "source": "https://github.com/orchestral/testbench/tree/v8.5.4"
+                "source": "https://github.com/orchestral/testbench/tree/v8.5.5"
             },
-            "time": "2023-05-24T00:44:58+00:00"
+            "time": "2023-05-30T08:19:18+00:00"
         },
         {
             "name": "orchestra/testbench-core",
