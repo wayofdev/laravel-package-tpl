@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.0.0](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.38...v2.0.0) (2023-05-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* update template
+
+### Features
+
+* update template ([9c83764](https://github.com/wayofdev/laravel-package-tpl/commit/9c837642abf47d7afdddfa280fd97121da902a36))
+
+
+### Bug Fixes
+
+* ci commands ([bb712eb](https://github.com/wayofdev/laravel-package-tpl/commit/bb712eb02d4c81af2f6d76e18dc033a478f58bc5))
+
 ## [1.1.38](https://github.com/wayofdev/laravel-package-tpl/compare/v1.1.37...v1.1.38) (2023-05-28)
 
 
