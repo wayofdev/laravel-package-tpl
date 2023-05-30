@@ -8,6 +8,11 @@ DOCKER_CMD =
 
 COMPOSER_RUN = $(DOCKER_CMD) composer
 
+# https://phpstan.org/user-guide/output-format
+export PHPSTAN_OUTPUT_FORMAT ?= table
+
+# Self documenting Makefile code
+# ------------------------------------------------------------------------------------
 ifneq ($(TERM),)
 	BLACK := $(shell tput setaf 0)
 	RED := $(shell tput setaf 1)
@@ -29,11 +34,10 @@ else
 	WHITE := ""
 	RST := ""
 endif
-MAKE_LOGFILE = /tmp/wayofdev-laravel-package-tpl.log
+MAKE_LOGFILE = /tmpwayofdev-laravel-package-tpl.log
 MAKE_CMD_COLOR := $(BLUE)
 
-# https://phpstan.org/user-guide/output-format
-export PHPSTAN_OUTPUT_FORMAT ?= table
+default: all
 
 help:
 	@echo 'Management commands for package:'
@@ -48,12 +52,22 @@ help:
 	@echo '    🏢 ${YELLOW}Org                     wayofdev (github.com/wayofdev)${RST}'
 .PHONY: help
 
+.EXPORT_ALL_VARIABLES:
+
+
+# Default action
+# Defines default command when `make` is executed without additional parameters
+# ------------------------------------------------------------------------------------
 all: install hooks
 .PHONY: all
 
+
+# System Actions
+# ------------------------------------------------------------------------------------
 prepare:
 	mkdir -p .build/php-cs-fixer
 .PHONY: prepare
+
 
 # Composer
 # ------------------------------------------------------------------------------------
@@ -65,41 +79,38 @@ update: ## Updates composer dependencies by running composer update command
 	$(COMPOSER_RUN) update
 .PHONY: update
 
-# Testing
-# ------------------------------------------------------------------------------------
-cs-diff: prepare ## Runs php-cs-fixer in dry-run mode and shows diff which will by applied
-	$(COMPOSER_RUN) cs-diff
-.PHONY: cs-diff
 
-cs-fix: prepare ## Fixes code to follow coding standards using php-cs-fixer
-	$(COMPOSER_RUN) cs-fix
-.PHONY: cs-fix
-
-stan: ## Runs phpstan – static analysis tool
-	$(COMPOSER_RUN) stan
-.PHONY: stan
-
-stan-ci:
-	$(COMPOSER_RUN) stan-ci
-.PHONY: stan-ci
-
-test: ## Run project php-unit and pest tests
-	XDEBUG_MODE=coverage $(COMPOSER_RUN) test
-.PHONY: test
-
-test-cc: ## Run project php-unit and pest tests in coverage mode and build report
-	$(COMPOSER_RUN) test-cc
-.PHONY: test-cc
-
-# Yaml Actions
-# ------------------------------------------------------------------------------------
-lint: ## Lints yaml files inside project
-	yamllint .
-.PHONY: lint
-
-# Git Actions
+# Code Quality, Git, Linting, Testing
 # ------------------------------------------------------------------------------------
 hooks: ## Install git hooks from pre-commit-config
 	pre-commit install
 	pre-commit autoupdate
 .PHONY: hooks
+
+lint-yaml: ## Lints yaml files inside project
+	yamllint .
+.PHONY: lint-yaml
+
+lint-php: prepare ## Fixes code to follow coding standards using php-cs-fixer
+	$(COMPOSER_RUN) cs:fix
+.PHONY: lint-php
+
+lint-diff: prepare ## Runs php-cs-fixer in dry-run mode and shows diff which will by applied
+	$(COMPOSER_RUN) cs:diff
+.PHONY: lint-diff
+
+lint-stan: ## Runs phpstan – static analysis tool
+	$(COMPOSER_RUN) stan
+.PHONY: lint-stan
+
+lint-stan-ci:
+	$(COMPOSER_RUN) stan:ci
+.PHONY: lint-stan-ci
+
+test: ## Run project php-unit and pest tests
+	$(COMPOSER_RUN) test
+.PHONY: test
+
+test-cc: ## Run project php-unit and pest tests in coverage mode and build report
+	$(COMPOSER_RUN) test:cc
+.PHONY: test-cc
