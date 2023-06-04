@@ -8,11 +8,8 @@
          failOnRisky="true"
          beStrictAboutOutputDuringTests="true">
     <testsuites>
-        <testsuite name="Pest">
-            <directory>tests/Pest</directory>
-        </testsuite>
-        <testsuite name="Unit">
-            <directory>tests/Unit</directory>
+        <testsuite name="Tests">
+            <directory>tests</directory>
         </testsuite>
     </testsuites>
     <coverage>
