@@ -41,16 +41,17 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "WayOfDev\\Package\\Tests\\": "tests/"
+            "WayOfDev\\Package\\App\\": "tests/app/",
+            "WayOfDev\\Package\\Tests\\": "tests/src/"
         }
     },
     "scripts": {
         "cs:fix": "php vendor/bin/php-cs-fixer fix -v",
         "cs:diff": "php vendor/bin/php-cs-fixer fix --dry-run -v --diff",
-        "test": "php vendor/bin/pest",
-        "test:cc": "php vendor/bin/pest --coverage",
-        "stan": "php vendor/bin/phpstan analyse",
-        "stan:ci": "php vendor/bin/phpstan analyse --error-format=github"
+        "test": "XDEBUG_MODE=coverage php vendor/bin/pest",
+        "test:cc": "XDEBUG_MODE=coverage php vendor/bin/pest --coverage",
+        "stan": "php vendor/bin/phpstan analyse --memory-limit=2G",
+        "stan:ci": "php vendor/bin/phpstan analyse --memory-limit=2G --error-format=github"
     },
     "config": {
         "sort-packages": true,
