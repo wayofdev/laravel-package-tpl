@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.1.0](https://github.com/wayofdev/laravel-package-tpl/compare/v2.0.3...v2.1.0) (2023-06-04)
+
+
+### Features
+
+* bump php version to 8.2 ([cbb5733](https://github.com/wayofdev/laravel-package-tpl/commit/cbb57332db249c74dbae4406f064943d5cd9896a))
+* split testing directory ([364acab](https://github.com/wayofdev/laravel-package-tpl/commit/364acabe8c5bef19e01434d65029a13218068a4d))
+* split testing directory ([e5f8e9d](https://github.com/wayofdev/laravel-package-tpl/commit/e5f8e9d0da949827b8e1590223917a4fd5c80063))
+
 ## [2.0.3](https://github.com/wayofdev/laravel-package-tpl/compare/v2.0.2...v2.0.3) (2023-06-02)
 
 
