@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.23](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.22...v2.1.23) (2023-06-21)
+
+
+### Miscellaneous
+
+* **deps:** update dependency wayofdev/cs-fixer-config to v1.2.16 ([b21fbf3](https://github.com/wayofdev/laravel-package-tpl/commit/b21fbf33ab58ab587a5c168fe7941a5913f2799e))
+
 ## [2.1.22](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.21...v2.1.22) (2023-06-21)
 
 
