@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.58](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.57...v2.1.58) (2023-07-25)
+
+
+### Miscellaneous
+
+* **deps:** update dependency orchestra/testbench to v8.5.10 ([8293a22](https://github.com/wayofdev/laravel-package-tpl/commit/8293a22a45ac070686276f749754e4375ef2a08b))
+
 ## [2.1.57](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.56...v2.1.57) (2023-07-24)
 
 
