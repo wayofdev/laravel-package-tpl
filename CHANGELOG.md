@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.63](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.62...v2.1.63) (2023-08-01)
+
+
+### Miscellaneous
+
+* **deps:** update dependency orchestra/testbench to v8.5.11 ([5885211](https://github.com/wayofdev/laravel-package-tpl/commit/58852112ec48d6f4b7c8795843cddbb5acdcf3a4))
+* **deps:** update dependency pestphp/pest to v2.10.1 ([4e2b16d](https://github.com/wayofdev/laravel-package-tpl/commit/4e2b16da8dd9594a88b55967c19482215a6d57a7))
+
 ## [2.1.62](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.61...v2.1.62) (2023-07-31)
 
 
