@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.87](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.86...v2.1.87) (2023-08-24)
+
+
+### Miscellaneous
+
+* **deps:** update dependency phpstan/phpstan to v1.10.31 ([d939ee8](https://github.com/wayofdev/laravel-package-tpl/commit/d939ee893124b9641bb49cc2307b9017f86761d5))
+* **deps:** update dependency wayofdev/cs-fixer-config to v1.2.45 ([3f7ab5f](https://github.com/wayofdev/laravel-package-tpl/commit/3f7ab5fe5586456cad088b5c256ff99ac6a3b916))
+
 ## [2.1.86](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.85...v2.1.86) (2023-08-22)
 
 
