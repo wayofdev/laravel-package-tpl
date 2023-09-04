@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.101](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.100...v2.1.101) (2023-09-04)
+
+
+### Miscellaneous
+
+* **deps:** update actions/checkout action to v4 ([28c186c](https://github.com/wayofdev/laravel-package-tpl/commit/28c186c422fddc766b28392d0e3c418a58a7c8f6))
+
 ## [2.1.100](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.99...v2.1.100) (2023-09-04)
 
 
