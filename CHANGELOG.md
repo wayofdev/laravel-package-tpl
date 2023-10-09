@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.113](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.112...v2.1.113) (2023-10-09)
+
+
+### Miscellaneous
+
+* **deps:** update dependency ergebnis/composer-normalize to v2.38.0 ([5c4334c](https://github.com/wayofdev/laravel-package-tpl/commit/5c4334c8315d4d4f47dbf468c757339ac704d543))
+
 ## [2.1.112](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.111...v2.1.112) (2023-10-06)
 
 
