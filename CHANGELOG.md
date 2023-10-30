@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.117](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.116...v2.1.117) (2023-10-30)
+
+
+### Miscellaneous
+
+* **deps:** update phpstan packages ([8c31241](https://github.com/wayofdev/laravel-package-tpl/commit/8c31241572c926f40337203927d932e67ba9c68c))
+
 ## [2.1.116](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.115...v2.1.116) (2023-10-17)
 
 
