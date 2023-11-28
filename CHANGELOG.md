@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.123](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.122...v2.1.123) (2023-11-28)
+
+
+### Miscellaneous
+
+* **deps:** update dependency phpstan/phpstan to v1.10.46 ([6e3796e](https://github.com/wayofdev/laravel-package-tpl/commit/6e3796ec19d8728cc2ef3446100ae2634f6a0caf))
+
 ## [2.1.122](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.121...v2.1.122) (2023-11-27)
 
 
