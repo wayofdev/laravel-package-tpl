@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "illuminate/contracts": "^v10.13"
+        "illuminate/contracts": "^v11.0.0"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.31",
