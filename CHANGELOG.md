@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.124...v2.2.0) (2024-03-26)
+
+
+### Features
+
+* update structure and dependencies ([8766e94](https://github.com/wayofdev/laravel-package-tpl/commit/8766e9461b5a52cd5971e5b0d5e474247b4050a4))
+
 ## [2.1.124](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.123...v2.1.124) (2023-12-01)
 
 
