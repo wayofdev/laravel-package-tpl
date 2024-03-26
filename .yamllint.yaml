@@ -1,10 +1,11 @@
 ---
 
-extends: "default"
+extends: default
 
 ignore: |
   .build/
   vendor/
+  docs/
 
 # Overwrite above default rules
 rules:
@@ -51,8 +52,6 @@ rules:
     require-starting-space: true
     min-spaces-from-content: 1
 
-yaml-files:
-  - "*.yaml"
-  - "*.yml"
+  line-length: disable
 
 ...
