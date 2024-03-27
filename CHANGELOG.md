@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/wayofdev/laravel-package-tpl/compare/v2.2.0...v2.3.0) (2024-03-27)
+
+
+### Features
+
+* add empty config ([d363cee](https://github.com/wayofdev/laravel-package-tpl/commit/d363cee16371b5d6ad5ca449eae063391ff2721c))
+
 ## [2.2.0](https://github.com/wayofdev/laravel-package-tpl/compare/v2.1.124...v2.2.0) (2024-03-26)
 
 
