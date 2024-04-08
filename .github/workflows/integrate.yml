@@ -60,7 +60,7 @@ jobs:
           dependencies: ${{ matrix.dependencies }}
 
       - name: 🧪 Collect code coverage with Xdebug and phpunit/phpunit
-        run: make test:cc
+        run: make test-cc
 
       - name: 📤 Upload code coverage report to Codecov
         uses: codecov/codecov-action@v4.1.1
