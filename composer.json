@@ -79,6 +79,7 @@
         "cs:diff": "php vendor/bin/php-cs-fixer fix --dry-run -v --diff",
         "cs:fix": "php vendor/bin/php-cs-fixer fix -v",
         "infect": "XDEBUG_MODE=coverage php vendor/bin/infection",
+        "infect:ci": "XDEBUG_MODE=coverage php vendor/bin/infection --ansi --configuration=infection.json.dist --logger-github",
         "stan": "php vendor/bin/phpstan analyse --memory-limit=2G",
         "stan:ci": "php vendor/bin/phpstan analyse --memory-limit=2G --error-format=github",
         "test": "XDEBUG_MODE=coverage php vendor/bin/pest",
