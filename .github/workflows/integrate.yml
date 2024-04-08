@@ -59,6 +59,9 @@ jobs:
         with:
           dependencies: ${{ matrix.dependencies }}
 
+      - name: 🛠️ Prepare environment
+        run: make env
+
       - name: 🧪 Collect code coverage with Xdebug and phpunit/phpunit
         run: make test-cc
 
