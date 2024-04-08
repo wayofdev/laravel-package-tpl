@@ -77,14 +77,14 @@ help:
 
 .EXPORT_ALL_VARIABLES:
 
-
+#
 # Default action
 # Defines default command when `make` is executed without additional parameters
 # ------------------------------------------------------------------------------------
 all: install hooks
 .PHONY: all
 
-
+#
 # System Actions
 # ------------------------------------------------------------------------------------
 env: ## Generate .env file from example, use `make env force=true`, to force re-create file
@@ -104,7 +104,7 @@ prepare:
 	mkdir -p .build/php-cs-fixer
 .PHONY: prepare
 
-
+#
 # Docker Actions
 # ------------------------------------------------------------------------------------
 up: # Creates and starts containers, defined in docker-compose and override file
@@ -138,7 +138,7 @@ ssh: ## Login inside running docker container
 	$(APP_RUNNER) sh
 .PHONY: ssh
 
-
+#
 # Composer
 # ------------------------------------------------------------------------------------
 install: ## Installs composer dependencies
@@ -149,8 +149,8 @@ update: ## Updates composer dependencies by running composer update command
 	$(APP_COMPOSER) update
 .PHONY: update
 
-
-# Code Quality, Git, Linting, Testing
+#
+# Code Quality, Git, Linting
 # ------------------------------------------------------------------------------------
 hooks: ## Install git hooks from pre-commit-config
 	pre-commit install
@@ -180,6 +180,13 @@ lint-stan-ci:
 	$(APP_COMPOSER) stan:ci
 .PHONY: lint-stan-ci
 
+#
+# Testing
+# ------------------------------------------------------------------------------------
+infect: ## Runs mutation tests with infection/infection
+	$(APP_COMPOSER) infect
+.PHONY: infect
+
 test: ## Run project php-unit and pest tests
 	$(APP_COMPOSER) test
 .PHONY: test
@@ -188,6 +195,7 @@ test-cc: ## Run project php-unit and pest tests in coverage mode and build repor
 	$(APP_COMPOSER) test:cc
 .PHONY: test-cc
 
+#
 # Documentation
 # ------------------------------------------------------------------------------------
 docs-deps-update: ## Check for outdated dependencies and automatically update them using pnpm
