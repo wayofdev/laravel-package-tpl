@@ -1,0 +1,138 @@
+---
+
+on:  # yamllint disable-line rule:truthy
+  pull_request:
+    branches:
+      - master
+
+name: 🔍 Continuous integration
+
+jobs:
+  code-coverage:
+    timeout-minutes: 4
+    runs-on: ${{ matrix.os }}
+    concurrency:
+      cancel-in-progress: true
+      group: coverage-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+    strategy:
+      fail-fast: true
+      matrix:
+        os:
+          - ubuntu-latest
+        php-version:
+          - '8.2'
+        dependencies:
+          - locked
+
+    steps:
+      - name: 📦 Check out the codebase
+        uses: actions/checkout@v4.1.1
+
+      - name: 🛠️ Setup PHP
+        uses: shivammathur/setup-php@2.30.1
+        with:
+          php-version: ${{ matrix.php-version }}
+          extensions: mbstring, pdo, pdo_sqlite
+          ini-values: error_reporting=E_ALL
+          coverage: xdebug
+
+      - name: 🛠️ Setup problem matchers
+        run: |
+          echo "::add-matcher::${{ runner.tool_cache }}/php.json"
+          echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
+
+      - name: 🤖 Validate composer.json and composer.lock
+        run: composer validate --ansi --strict
+
+      - name: 🔍 Get composer cache directory
+        uses: wayofdev/gh-actions/actions/composer/get-cache-directory@master
+
+      - name: ♻️ Restore cached dependencies installed with composer
+        uses: actions/cache@v4.0.2
+        with:
+          path: ${{ env.COMPOSER_CACHE_DIR }}
+          key: php-${{ matrix.php-version }}-composer-${{ matrix.dependencies }}-${{ hashFiles('composer.lock') }}
+          restore-keys: php-${{ matrix.php-version }}-composer-${{ matrix.dependencies }}-
+
+      - name: 📥 Install "${{ matrix.dependencies }}" dependencies
+        uses: wayofdev/gh-actions/actions/composer/install@master
+        with:
+          dependencies: ${{ matrix.dependencies }}
+
+      - name: 🧪 Collect code coverage with Xdebug and phpunit/phpunit
+        run: make test:cc
+
+      - name: 📤 Upload code coverage report to Codecov
+        uses: codecov/codecov-action@v4.1.1
+        with:
+          files: .build/phpunit/logs/clover.xml
+          token: ${{ secrets.CODECOV_TOKEN }}
+          verbose: true
+
+  coding-standards:
+    timeout-minutes: 4
+    runs-on: ubuntu-latest
+    concurrency:
+      cancel-in-progress: true
+      group: coding-standards-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+    strategy:
+      fail-fast: true
+      matrix:
+        os:
+          - ubuntu-latest
+        php-version:
+          - '8.2'
+        dependencies:
+          - locked
+
+    steps:
+      - name: 📦 Check out the codebase
+        uses: actions/checkout@v4.1.1
+
+      - name: 🧐 Lint YAML files
+        uses: ibiqlik/action-yamllint@v3.1.1
+        with:
+          config_file: .yamllint.yaml
+          file_or_dir: '.'
+          strict: true
+
+      - name: 🛠️ Setup PHP
+        uses: shivammathur/setup-php@2.30.1
+        with:
+          php-version: ${{ matrix.php-version }}
+          extensions: mbstring, pdo, pdo_sqlite
+          ini-values: error_reporting=E_ALL
+          coverage: xdebug
+
+      - name: 🛠️ Setup problem matchers
+        run: |
+          echo "::add-matcher::${{ runner.tool_cache }}/php.json"
+
+      - name: 🤖 Validate composer.json and composer.lock
+        run: composer validate --ansi --strict
+
+      - name: 🔍 Get composer cache directory
+        uses: wayofdev/gh-actions/actions/composer/get-cache-directory@master
+
+      - name: ♻️ Restore cached dependencies installed with composer
+        uses: actions/cache@v4.0.2
+        with:
+          path: ${{ env.COMPOSER_CACHE_DIR }}
+          key: php-${{ matrix.php-version }}-composer-${{ matrix.dependencies }}-${{ hashFiles('composer.lock') }}
+          restore-keys: php-${{ matrix.php-version }}-composer-${{ matrix.dependencies }}-
+
+      - name: 📥 Install "${{ matrix.dependencies }}" dependencies
+        uses: wayofdev/gh-actions/actions/composer/install@master
+        with:
+          dependencies: ${{ matrix.dependencies }}
+
+      - name: 🛠️ Prepare environment
+        run: |
+          mkdir -p ./.build/php-cs-fixer
+
+      - name: 🚨 Run coding standards task
+        run: composer cs:diff
+        env:
+          PHP_CS_FIXER_IGNORE_ENV: true
+
+...
