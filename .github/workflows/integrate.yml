@@ -59,11 +59,8 @@ jobs:
         with:
           dependencies: ${{ matrix.dependencies }}
 
-      - name: 🛠️ Prepare environment
-        run: make env
-
       - name: 🧪 Collect code coverage with Xdebug and phpunit/phpunit
-        run: make test-cc
+        run: composer test:cc
 
       - name: 📤 Upload code coverage report to Codecov
         uses: codecov/codecov-action@v4.1.1
@@ -130,8 +127,7 @@ jobs:
           dependencies: ${{ matrix.dependencies }}
 
       - name: 🛠️ Prepare environment
-        run: |
-          mkdir -p ./.build/php-cs-fixer
+        run: make prepare
 
       - name: 🚨 Run coding standards task
         run: composer cs:diff
