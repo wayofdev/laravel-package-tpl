@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.4.0](https://github.com/wayofdev/laravel-package-tpl/compare/v2.3.0...v2.4.0) (2024-04-09)
+
+
+### Features
+
+* add infection/infection to support mutation tests ([069a503](https://github.com/wayofdev/laravel-package-tpl/commit/069a503c68a071d2788039f68afbd1f80e1c43f0))
+* add support files ([069a503](https://github.com/wayofdev/laravel-package-tpl/commit/069a503c68a071d2788039f68afbd1f80e1c43f0))
+* ergebnis/phpunit-slow-test-detector to detect slow tests ([069a503](https://github.com/wayofdev/laravel-package-tpl/commit/069a503c68a071d2788039f68afbd1f80e1c43f0))
+
 ## [2.3.0](https://github.com/wayofdev/laravel-package-tpl/compare/v2.2.0...v2.3.0) (2024-03-27)
 
 
