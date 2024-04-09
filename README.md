@@ -34,7 +34,7 @@ If you **like/use** this package, please consider ⭐️ **starring** it. Thanks
 
 This template repository includes several features to streamline the development of Laravel packages:
 
-**Testing:**
+### → Testing
 
 - Configured [PHPUnit](https://phpunit.de/index.html) for unit testing.
 - Integrated [Pest PHP](https://pestphp.com) for elegant testing.
@@ -42,25 +42,34 @@ This template repository includes several features to streamline the development
 - [PHPStan](https://phpstan.org) extensions for PHPUnit and Laravel.
 - Infection for mutation testing to ensure quality.
 
-**Static Analysis:**
+### → Static Analysis
+
 - [PHPStan](https://phpstan.org) for static analysis, ensuring code quality and robustness.
 - [Larastan](https://github.com/larastan/larastan) for Laravel-specific static analysis.
 - [PHPStan strict rules](https://github.com/phpstan/phpstan-strict-rules) for enforcing strict type checks and standards.
 
-**Coding Standards:**
+### → Coding Standards:
+
 - [PHP CS Fixer](https://github.com/wayofdev/php-cs-fixer-config) with custom configuration for consistent code style.
 - [Composer Normalize](https://github.com/ergebnis/composer-normalize) to ensure a consistent `composer.json` format.
 
-**Continuous Integration:**
+### → Continuous Integration
 
-- GitHub Actions workflows for automated testing, linting, and static analysis.
-- Security checks with Roave Security Advisories to prevent the use of packages with known vulnerabilities.
+- Automated testing with code coverage report generation using PHPUnit and Xdebug, uploaded to [Codecov](https://about.codecov.io).
+- Automated linting of YAML files and PHP code to ensure consistency and adherence to best practices.
+- Checks for outdated or insecure dependencies using Composer.
+- Mutation testing with [Infection](https://github.com/infection/infection) to assess the quality of the test suite.
+- Security checks to identify vulnerabilities in dependencies.
+- Comprehensive static analysis with [PHPStan](https://phpstan.org) to detect potential issues early.
+- Extensive testing across different setups to ensure compatibility and stability.
 
-**Development Environment:**
+### → Development Environment
+
 - Docker support for consistent development environments.
 - [Pre-commit](https://pre-commit.com) hooks setup to ensure code quality before commits.
 
-**Miscellaneous:**
+### → Miscellaneous
+
 - Support for PHP 8.2 and Laravel 10.x/11.x.
 - Configured autoload and autoload-dev for optimal namespace management.
 
