@@ -63,6 +63,9 @@
         "audit": {
             "abandoned": "report"
         },
+        "platform": {
+            "php": "8.2.17"
+        },
         "sort-packages": true
     },
     "extra": {
