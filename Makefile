@@ -25,15 +25,19 @@ BUILDER_WIRED ?= $(BUILDER_PARAMS) --network project.$(COMPOSE_PROJECT_NAME) $(S
 # Shorthand envsubst command, executed through build-deps
 ENVSUBST ?= $(BUILDER) envsubst
 
-NPM_RUNNER ?= pnpm
+# Commitizen docker image
+CZ_RUNNER ?= docker run --rm -it --name commitizen \
+  --platform linux/amd64 \
+  -v $(shell pwd):/app \
+  commitizen/commitizen:latest
 
-# https://phpstan.org/user-guide/output-format
-export PHPSTAN_OUTPUT_FORMAT ?= table
+NPM_RUNNER ?= pnpm
 
 EXPORT_VARS = '\
 	$${COMPOSE_PROJECT_NAME} \
 	$${COMPOSER_AUTH}'
 
+#
 # Self documenting Makefile code
 # ------------------------------------------------------------------------------------
 ifneq ($(TERM),)
@@ -77,14 +81,14 @@ help:
 
 .EXPORT_ALL_VARIABLES:
 
-
+#
 # Default action
 # Defines default command when `make` is executed without additional parameters
 # ------------------------------------------------------------------------------------
-all: install hooks
+all: env prepare install hooks phive up
 .PHONY: all
 
-
+#
 # System Actions
 # ------------------------------------------------------------------------------------
 env: ## Generate .env file from example, use `make env force=true`, to force re-create file
@@ -104,7 +108,7 @@ prepare:
 	mkdir -p .build/php-cs-fixer
 .PHONY: prepare
 
-
+#
 # Docker Actions
 # ------------------------------------------------------------------------------------
 up: # Creates and starts containers, defined in docker-compose and override file
@@ -138,7 +142,7 @@ ssh: ## Login inside running docker container
 	$(APP_RUNNER) sh
 .PHONY: ssh
 
-
+#
 # Composer
 # ------------------------------------------------------------------------------------
 install: ## Installs composer dependencies
@@ -149,8 +153,12 @@ update: ## Updates composer dependencies by running composer update command
 	$(APP_COMPOSER) update
 .PHONY: update
 
+phive: ## Installs dependencies with phive
+	PHIVE_HOME=.build/phive phive install --trust-gpg-keys 0x033E5F8D801A2F8D
+.PHONY: phive
 
-# Code Quality, Git, Linting, Testing
+#
+# Code Quality, Git, Linting
 # ------------------------------------------------------------------------------------
 hooks: ## Install git hooks from pre-commit-config
 	pre-commit install
@@ -176,9 +184,28 @@ lint-stan: ## Runs phpstan – static analysis tool
 	$(APP_COMPOSER) stan
 .PHONY: lint-stan
 
-lint-stan-ci:
+lint-stan-ci: ## Runs phpstan – static analysis tool with github output (CI mode)
 	$(APP_COMPOSER) stan:ci
 .PHONY: lint-stan-ci
+
+lint-infect: ## Runs infection – mutation testing framework
+	$(APP_COMPOSER) infect
+.PHONY: lint-infect
+
+lint-infect-ci: ## Runs infection – mutation testing framework with github output (CI mode)
+	$(APP_COMPOSER) infect:ci
+.PHONY: lint-infect-ci
+
+lint-deps: ## Runs composer-require-checker – checks for dependencies that are not used
+	.phive/composer-require-checker check --config-file=$(shell pwd)/composer-require-checker.json --verbose
+.PHONY: lint-deps
+
+#
+# Testing
+# ------------------------------------------------------------------------------------
+infect: ## Runs mutation tests with infection/infection
+	$(APP_COMPOSER) infect
+.PHONY: infect
 
 test: ## Run project php-unit and pest tests
 	$(APP_COMPOSER) test
@@ -188,6 +215,14 @@ test-cc: ## Run project php-unit and pest tests in coverage mode and build repor
 	$(APP_COMPOSER) test:cc
 .PHONY: test-cc
 
+#
+# Release
+# ------------------------------------------------------------------------------------
+commit:
+	@$(CZ_RUNNER) commit
+.PHONY: commit
+
+#
 # Documentation
 # ------------------------------------------------------------------------------------
 docs-deps-update: ## Check for outdated dependencies and automatically update them using pnpm
