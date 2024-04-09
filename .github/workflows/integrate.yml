@@ -29,7 +29,7 @@ jobs:
         uses: actions/checkout@v4.1.1
 
       - name: 🛠️ Setup PHP
-        uses: shivammathur/setup-php@2.30.1
+        uses: shivammathur/setup-php@2.30.2
         with:
           php-version: ${{ matrix.php-version }}
           extensions: mbstring, pdo, pdo_sqlite
@@ -97,7 +97,7 @@ jobs:
           strict: true
 
       - name: 🛠️ Setup PHP
-        uses: shivammathur/setup-php@2.30.1
+        uses: shivammathur/setup-php@2.30.2
         with:
           php-version: ${{ matrix.php-version }}
           extensions: mbstring, pdo, pdo_sqlite
@@ -154,7 +154,7 @@ jobs:
         uses: actions/checkout@v4.1.1
 
       - name: 🛠️ Setup PHP
-        uses: shivammathur/setup-php@2.30.1
+        uses: shivammathur/setup-php@2.30.2
         with:
           php-version: ${{ matrix.php-version }}
           extensions: mbstring, json, curl, dom, xml, phar
@@ -212,7 +212,7 @@ jobs:
         uses: actions/checkout@v4.1.1
 
       - name: 🛠️ Setup PHP
-        uses: shivammathur/setup-php@2.30.1
+        uses: shivammathur/setup-php@2.30.2
         with:
           php-version: ${{ matrix.php-version }}
           extensions: mbstring, pdo, pdo_sqlite
@@ -263,7 +263,7 @@ jobs:
         uses: actions/checkout@v4.1.1
 
       - name: 🛠️ Setup PHP
-        uses: shivammathur/setup-php@2.30.1
+        uses: shivammathur/setup-php@2.30.2
         with:
           php-version: ${{ matrix.php-version }}
           extensions: mbstring, pdo, pdo_sqlite
@@ -314,7 +314,7 @@ jobs:
         uses: actions/checkout@v4.1.1
 
       - name: 🛠️ Setup PHP
-        uses: shivammathur/setup-php@2.30.1
+        uses: shivammathur/setup-php@2.30.2
         with:
           php-version: ${{ matrix.php-version }}
           extensions: mbstring, pdo, pdo_sqlite
@@ -371,7 +371,7 @@ jobs:
         uses: actions/checkout@v4.1.1
 
       - name: 🛠️ Setup PHP
-        uses: shivammathur/setup-php@2.30.1
+        uses: shivammathur/setup-php@2.30.2
         with:
           php-version: ${{ matrix.php-version }}
           extensions: mbstring, pdo, pdo_sqlite
