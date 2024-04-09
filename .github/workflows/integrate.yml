@@ -348,12 +348,12 @@ jobs:
       - name: 🔍 Run static analysis using phpstan
         run: composer stan:ci
 
-  tests:
+  testing:
     timeout-minutes: 4
     runs-on: ${{ matrix.os }}
     concurrency:
       cancel-in-progress: true
-      group: tests-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}-${{ matrix.php-version }}-${{ matrix.dependencies }}
+      group: testing-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}-${{ matrix.php-version }}-${{ matrix.dependencies }}
     strategy:
       fail-fast: true
       matrix:
@@ -404,6 +404,6 @@ jobs:
           dependencies: ${{ matrix.dependencies }}
 
       - name: 🧪 Run tests using phpunit/phpunit
-        run: composer test
+        run: php vendor/bin/pest
 
 ...

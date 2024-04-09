@@ -25,15 +25,19 @@ BUILDER_WIRED ?= $(BUILDER_PARAMS) --network project.$(COMPOSE_PROJECT_NAME) $(S
 # Shorthand envsubst command, executed through build-deps
 ENVSUBST ?= $(BUILDER) envsubst
 
-NPM_RUNNER ?= pnpm
+# Commitizen docker image
+CZ_RUNNER ?= docker run --rm -it --name commitizen \
+  --platform linux/amd64 \
+  -v $(shell pwd):/app \
+  commitizen/commitizen:latest
 
-# https://phpstan.org/user-guide/output-format
-export PHPSTAN_OUTPUT_FORMAT ?= table
+NPM_RUNNER ?= pnpm
 
 EXPORT_VARS = '\
 	$${COMPOSE_PROJECT_NAME} \
 	$${COMPOSER_AUTH}'
 
+#
 # Self documenting Makefile code
 # ------------------------------------------------------------------------------------
 ifneq ($(TERM),)
@@ -81,7 +85,7 @@ help:
 # Default action
 # Defines default command when `make` is executed without additional parameters
 # ------------------------------------------------------------------------------------
-all: install hooks
+all: env prepare install hooks phive up
 .PHONY: all
 
 #
@@ -210,6 +214,13 @@ test: ## Run project php-unit and pest tests
 test-cc: ## Run project php-unit and pest tests in coverage mode and build report
 	$(APP_COMPOSER) test:cc
 .PHONY: test-cc
+
+#
+# Release
+# ------------------------------------------------------------------------------------
+commit:
+	@$(CZ_RUNNER) commit
+.PHONY: commit
 
 #
 # Documentation
