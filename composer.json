@@ -17,7 +17,8 @@
     },
     "require": {
         "php": "^8.2",
-        "illuminate/contracts": "^10.48 || ^11.0"
+        "illuminate/contracts": "^10.48 || ^11.0",
+        "illuminate/support": "^10.48 || ^11.0"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.42",
@@ -78,8 +79,8 @@
     "scripts": {
         "cs:diff": "php vendor/bin/php-cs-fixer fix --dry-run -v --diff",
         "cs:fix": "php vendor/bin/php-cs-fixer fix -v",
-        "infect": "XDEBUG_MODE=coverage php vendor/bin/infection",
-        "infect:ci": "XDEBUG_MODE=coverage php vendor/bin/infection --ansi --configuration=infection.json.dist --logger-github",
+        "infect": "XDEBUG_MODE=coverage php vendor/bin/infection --min-msi=55 --min-covered-msi=55",
+        "infect:ci": "XDEBUG_MODE=coverage php vendor/bin/infection --min-msi=55 --min-covered-msi=55 --ansi --configuration=infection.json.dist --logger-github",
         "stan": "php vendor/bin/phpstan analyse --memory-limit=2G",
         "stan:ci": "php vendor/bin/phpstan analyse --memory-limit=2G --error-format=github",
         "test": "XDEBUG_MODE=coverage php vendor/bin/pest",

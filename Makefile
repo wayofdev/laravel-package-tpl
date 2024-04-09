@@ -149,6 +149,10 @@ update: ## Updates composer dependencies by running composer update command
 	$(APP_COMPOSER) update
 .PHONY: update
 
+phive: ## Installs dependencies with phive
+	PHIVE_HOME=.build/phive phive install --trust-gpg-keys 0x033E5F8D801A2F8D
+.PHONY: phive
+
 #
 # Code Quality, Git, Linting
 # ------------------------------------------------------------------------------------
@@ -176,9 +180,21 @@ lint-stan: ## Runs phpstan – static analysis tool
 	$(APP_COMPOSER) stan
 .PHONY: lint-stan
 
-lint-stan-ci:
+lint-stan-ci: ## Runs phpstan – static analysis tool with github output (CI mode)
 	$(APP_COMPOSER) stan:ci
 .PHONY: lint-stan-ci
+
+lint-infect: ## Runs infection – mutation testing framework
+	$(APP_COMPOSER) infect
+.PHONY: lint-infect
+
+lint-infect-ci: ## Runs infection – mutation testing framework with github output (CI mode)
+	$(APP_COMPOSER) infect:ci
+.PHONY: lint-infect-ci
+
+lint-deps: ## Runs composer-require-checker – checks for dependencies that are not used
+	.phive/composer-require-checker check --config-file=$(shell pwd)/composer-require-checker.json --verbose
+.PHONY: lint-deps
 
 #
 # Testing
