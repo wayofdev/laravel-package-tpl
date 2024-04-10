@@ -130,8 +130,16 @@ $ make lint-yaml
 
 <br>
 
+## 📥 Contributing
+
+The maintainers of this project suggest following the [contribution guide](https://github.com/wayofdev/laravel-package-tpl/blob/master/.github/CONTRIBUTING.md).
+
+<br>
+
 ## 🙆🏼‍♂️ Author Information
 
 Created in **2022** by [lotyp / wayofdev](https://github.com/wayofdev)
+
+Follow [@wayofdev](https://twitter.com/intent/follow?screen_name=wayofdev) on Twitter.
 
 <br>
