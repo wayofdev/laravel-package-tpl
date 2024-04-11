@@ -28,8 +28,12 @@ ENVSUBST ?= $(BUILDER) envsubst
 # Commitizen docker image
 CZ_RUNNER ?= docker run --rm -it --name commitizen \
   --platform linux/amd64 \
+  --entrypoint /bin/sh \
+  -v ~/.gitconfig:/root/.gitconfig \
   -v $(shell pwd):/app \
   commitizen/commitizen:latest
+
+PHIVE_RUNNER ?= $(DOCKER_COMPOSE) run --rm --no-deps app
 
 NPM_RUNNER ?= pnpm
 
@@ -70,7 +74,7 @@ help:
 	@echo 'Management commands for package:'
 	@echo 'Usage:'
 	@echo '    ${MAKE_CMD_COLOR}make${RST}                       Setups dependencies for fresh-project, like composer install, git hooks and others...'
-	@grep -E '^[a-zA-Z_0-9%-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "    ${MAKE_CMD_COLOR}make %-21s${RST} %s\n", $$1, $$2}'
+	@grep -E '^[a-zA-Z_0-9%-]+:.*?## .*$$' Makefile | awk 'BEGIN {FS = ":.*?## "}; {printf "    ${MAKE_CMD_COLOR}make %-21s${RST} %s\n", $$1, $$2}'
 	@echo
 	@echo '    📑 Logs are stored in      $(MAKE_LOGFILE)'
 	@echo
@@ -154,7 +158,7 @@ update: ## Updates composer dependencies by running composer update command
 .PHONY: update
 
 phive: ## Installs dependencies with phive
-	PHIVE_HOME=.build/phive phive install --trust-gpg-keys 0x033E5F8D801A2F8D
+	$(APP_RUNNER) /usr/local/bin/phive install --trust-gpg-keys 0x033E5F8D801A2F8D
 .PHONY: phive
 
 #
@@ -188,17 +192,23 @@ lint-stan-ci: ## Runs phpstan – static analysis tool with github output (CI mo
 	$(APP_COMPOSER) stan:ci
 .PHONY: lint-stan-ci
 
-lint-infect: ## Runs infection – mutation testing framework
-	$(APP_COMPOSER) infect
-.PHONY: lint-infect
-
-lint-infect-ci: ## Runs infection – mutation testing framework with github output (CI mode)
-	$(APP_COMPOSER) infect:ci
-.PHONY: lint-infect-ci
+lint-stan-baseline: ## Runs phpstan to update its baseline
+	$(APP_COMPOSER) stan:baseline
+.PHONY: lint-stan-baseline
 
 lint-deps: ## Runs composer-require-checker – checks for dependencies that are not used
-	.phive/composer-require-checker check --config-file=$(shell pwd)/composer-require-checker.json --verbose
+	$(APP_RUNNER) .phive/composer-require-checker check \
+		--config-file=/app/composer-require-checker.json \
+		--verbose
 .PHONY: lint-deps
+
+lint-composer: ## Normalize composer.json and composer.lock files
+	$(APP_COMPOSER) normalize
+.PHONY: lint-composer
+
+lint-audit: ## Runs security checks for composer dependencies
+	$(APP_COMPOSER) audit
+.PHONY: lint-security
 
 #
 # Testing
@@ -206,6 +216,10 @@ lint-deps: ## Runs composer-require-checker – checks for dependencies that are
 infect: ## Runs mutation tests with infection/infection
 	$(APP_COMPOSER) infect
 .PHONY: infect
+
+infect-ci: ## Runs infection – mutation testing framework with github output (CI mode)
+	$(APP_COMPOSER) infect:ci
+.PHONY: lint-infect-ci
 
 test: ## Run project php-unit and pest tests
 	$(APP_COMPOSER) test
@@ -219,7 +233,7 @@ test-cc: ## Run project php-unit and pest tests in coverage mode and build repor
 # Release
 # ------------------------------------------------------------------------------------
 commit:
-	@$(CZ_RUNNER) commit
+	cz commit
 .PHONY: commit
 
 #
