@@ -28,6 +28,5 @@ repos:
         files: \.php$
         pass_filenames: false
         require_serial: true
-        always_run: true
 
 ...
