@@ -8,27 +8,19 @@ The latest changes are always in master branch, so please make your Pull Request
 
 ## 🚩 Development Requirements
 
-To set up your local development environment, you'll need the following:
+Before you begin, you will need to set up your local development environment. Here is what you'll need:
 
-- **Operating System**: macOS Monterey+ or Linux.
-
-- Docker Version 26.0.0 or newer. Installation guides:
-
+- **Operating System**: macOS Monterey+, Linux, or Windows with WSL2.
+- **Docker**: Version 26.0.0 or newer. Installation guides:
   - [Docker on Ubuntu 22.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04)
   - [Docker Desktop on Mac](https://docs.docker.com/desktop/install/mac-install/)
-
 - **Homebrew** (macOS only): Install via [brew.sh](https://brew.sh/).
 
-- [Pre-commit](https://pre-commit.com)
+### → Optional Tools
 
-   (Optional): Automates the running of git pre-commit hooks.
-
-  - Installation: `brew install pre-commit`
-
-- [Commitizen](https://commitizen-tools.github.io/commitizen/#macos)
-
-   (Optional): Assists in formatting git commits.
-
+- [Pre-commit](https://pre-commit.com) — Automates the running of git pre-commit hooks.
+  - Installation: `brew install pre-commit` and `make hooks`
+- [Commitizen](https://commitizen-tools.github.io/commitizen/#macos) — Assists in formatting git commits.
   - Installation: `brew install commitizen`
 
 <br>
@@ -89,6 +81,8 @@ $ make ssh
 # Turn off containers
 $ make down
 ```
+
+By default, phpunit and phpstan commands will be ran against docker environment.
 
 <br>
 
@@ -161,7 +155,7 @@ $ make lint-composer
 
 We use [`yamllint`](https://github.com/adrienverge/yamllint) to enforce coding standards in YAML files.
 
-If you do not have `yamllint` installed yet, run
+(Optional) If you do not have `yamllint` installed yet, run:
 
 ```bash
 $ brew install yamllint
@@ -174,6 +168,8 @@ To lint yaml files run:
 ```bash
 $ make lint-yaml
 ```
+
+by default, [`cytopia/yamllint`](https://github.com/cytopia/docker-yamllint) Docker image will be used to run linter.
 
 ### → PHP CS Fixer
 

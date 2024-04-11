@@ -25,13 +25,11 @@ BUILDER_WIRED ?= $(BUILDER_PARAMS) --network project.$(COMPOSE_PROJECT_NAME) $(S
 # Shorthand envsubst command, executed through build-deps
 ENVSUBST ?= $(BUILDER) envsubst
 
-# Commitizen docker image
-CZ_RUNNER ?= docker run --rm -it --name commitizen \
-  --platform linux/amd64 \
-  --entrypoint /bin/sh \
-  -v ~/.gitconfig:/root/.gitconfig \
-  -v $(shell pwd):/app \
-  commitizen/commitizen:latest
+# Yamllint docker image
+YAML_LINT_RUNNER ?= docker run --rm $$(tty -s && echo "-it" || echo) \
+	-v $(PWD):/data \
+	cytopia/yamllint:latest \
+	-f colored .
 
 PHIVE_RUNNER ?= $(DOCKER_COMPOSE) run --rm --no-deps app
 
@@ -174,7 +172,7 @@ lint: lint-yaml lint-php lint-stan ## Runs all linting commands
 .PHONY: lint
 
 lint-yaml: ## Lints yaml files inside project
-	yamllint .
+	@$(YAML_LINT_RUNNER)
 .PHONY: lint-yaml
 
 lint-php: prepare ## Fixes code to follow coding standards using php-cs-fixer
