@@ -168,7 +168,7 @@ hooks: ## Install git hooks from pre-commit-config
 	pre-commit autoupdate
 .PHONY: hooks
 
-lint: lint-yaml lint-php lint-stan ## Runs all linting commands
+lint: lint-yaml lint-php lint-stan lint-composer lint-audit ## Runs all linting commands
 .PHONY: lint
 
 lint-yaml: ## Lints yaml files inside project

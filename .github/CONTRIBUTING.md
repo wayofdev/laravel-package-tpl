@@ -41,8 +41,8 @@ $ make help
 - `make down`: Stops all running Docker containers.
 - `make ssh`: Logs into the running application container for command line operations.
 - `make lint`: Executes all linting procedures for YAML, PHP, and Composer files.
-- `make test`: Runs all configured tests using PHPUnit and Pest.
-- `make commit`: Runs Commitizen for commit message formatting in a Docker environment.
+- `make test`: Runs all configured tests using PHPUnit and Pest in a Dockerized environment.
+- `make commit`: Runs cz-git, a commitizen adapter for commit message formatting in a native environment.
 - `make install`: Installs project dependencies through Composer in a Dockerized environment.
 
 Refer to the output of `make help` for a comprehensive list of available commands.
@@ -103,6 +103,7 @@ Our project employs [GitHub Actions](https://github.com/features/actions) for co
 - **Tests**: Include tests that cover any new features or bug fixes.
 - **Code Quality**: Utilize `make lint` for code style checks and `make lint-stan` for static analysis with [Psalm](https://psalm.dev/).
 - **Documentation**: Update relevant documentation to reflect your changes, ensuring other developers can understand and use your contributions effectively.
+- **Commits**: use Conventional Commits standard to create a commit
 
 <br>
 
@@ -155,14 +156,6 @@ $ make lint-composer
 
 We use [`yamllint`](https://github.com/adrienverge/yamllint) to enforce coding standards in YAML files.
 
-(Optional) If you do not have `yamllint` installed yet, run:
-
-```bash
-$ brew install yamllint
-```
-
-to install `yamllint`.
-
 To lint yaml files run:
 
 ```bash
@@ -192,7 +185,7 @@ We use [`maglnet/composer-require-checker`](https://github.com/maglnet/ComposerR
 Run
 
 ```sh
-make lint-deps
+$ make lint-deps
 ```
 
 to run a dependency analysis.
@@ -206,7 +199,7 @@ We use [`infection/infection`](https://github.com/infection/infection) to ensure
 Xdebug support is enabled by default, when running commands through `Makefile`:
 
 ```sh
-make infect
+$ make infect
 ```
 
 to run mutation tests.
@@ -220,7 +213,7 @@ We use [`phpstan/phpstan`](https://github.com/phpstan/phpstan) to statically ana
 Run
 
 ```sh
-make lint-stan
+$ make lint-stan
 ```
 
 to run a static code analysis.
@@ -230,7 +223,7 @@ We also use the baseline features of [`phpstan/phpstan`](https://phpstan.org/use
 Run
 
 ```sh
-make lint-stan-baseline
+$ make lint-stan-baseline
 ```
 
 to regenerate the baselines in [`../phpstan-baseline.neon`](../phpstan-baseline.neon).
@@ -248,7 +241,7 @@ We use [`phpunit/phpunit`](https://github.com/sebastianbergmann/phpunit) and [`p
 Run
 
 ```sh
-make tests
+$ make tests
 ```
 
 to run all the tests.

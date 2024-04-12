@@ -85,12 +85,12 @@
         "cs:fix": "php vendor/bin/php-cs-fixer fix -v",
         "infect": "XDEBUG_MODE=coverage php vendor/bin/infection --min-msi=55 --min-covered-msi=55",
         "infect:ci": "XDEBUG_MODE=coverage php vendor/bin/infection --min-msi=55 --min-covered-msi=55 --ansi --configuration=infection.json.dist --logger-github",
-        "stan": "php vendor/bin/phpstan analyse --memory-limit=2G",
-        "stan:ci": "php vendor/bin/phpstan analyse --memory-limit=2G --error-format=github",
-        "stan:baseline": "php vendor/bin/phpstan analyse --generate-baseline --memory-limit=2G --allow-empty-baseline",
-        "test": "XDEBUG_MODE=coverage php vendor/bin/pest",
-        "test:cc": "XDEBUG_MODE=coverage php vendor/bin/pest --coverage --coverage-clover=.build/phpunit/logs/clover.xml",
         "refactor": "php vendor/bin/rector process --config=rector.php",
-        "refactor:ci": "php vendor/bin/rector process --config=rector.php --dry-run --ansi"
+        "refactor:ci": "php vendor/bin/rector process --config=rector.php --dry-run --ansi",
+        "stan": "php vendor/bin/phpstan analyse --memory-limit=2G",
+        "stan:baseline": "php vendor/bin/phpstan analyse --generate-baseline --memory-limit=2G --allow-empty-baseline",
+        "stan:ci": "php vendor/bin/phpstan analyse --memory-limit=2G --error-format=github",
+        "test": "XDEBUG_MODE=coverage php vendor/bin/pest",
+        "test:cc": "XDEBUG_MODE=coverage php vendor/bin/pest --coverage --coverage-clover=.build/phpunit/logs/clover.xml"
     }
 }
