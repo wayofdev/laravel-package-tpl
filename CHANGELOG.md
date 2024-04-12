@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/wayofdev/laravel-package-tpl/compare/v2.4.1...v2.5.0) (2024-04-12)
+
+
+### Features
+
+* add rector support ([0a8df56](https://github.com/wayofdev/laravel-package-tpl/commit/0a8df56448aab79a7db24c719d970ea86c3c7c7c))
+
 ## [2.4.1](https://github.com/wayofdev/laravel-package-tpl/compare/v2.4.0...v2.4.1) (2024-04-12)
 
 
