@@ -20,7 +20,7 @@ jobs:
 
       # See: https://github.com/wagoid/commitlint-github-action
       - name: 🧐 Lint commits using "commitlint"
-        uses: wagoid/commitlint-github-action@v6.0.0
+        uses: wagoid/commitlint-github-action@v6.0.1
         with:
           configFile: ${{ github.workspace }}/.github/.commitlint.config.mjs
           failOnWarnings: false
