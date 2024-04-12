@@ -209,6 +209,10 @@ lint-audit: ## Runs security checks for composer dependencies
 	$(APP_COMPOSER) audit
 .PHONY: lint-security
 
+refactor: ## Runs rector – code refactoring tool
+	$(APP_COMPOSER) refactor
+.PHONY: refactor
+
 #
 # Testing
 # ------------------------------------------------------------------------------------
