@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.1](https://github.com/wayofdev/laravel-package-tpl/compare/v2.5.0...v2.5.1) (2024-04-12)
+
+
+### Documentation
+
+* minor updates ([cf97b4d](https://github.com/wayofdev/laravel-package-tpl/commit/cf97b4d2aab906f4ece6c2eead2050c32e30ab1f))
+
 ## [2.5.0](https://github.com/wayofdev/laravel-package-tpl/compare/v2.4.1...v2.5.0) (2024-04-12)
 
 
