@@ -20,8 +20,8 @@ Before you begin, you will need to set up your local development environment. He
 
 - [Pre-commit](https://pre-commit.com) — Automates the running of git pre-commit hooks.
   - Installation: `brew install pre-commit` and `make hooks`
-- [Commitizen](https://commitizen-tools.github.io/commitizen/#macos) — Assists in formatting git commits.
-  - Installation: `brew install commitizen`
+- [Cz-git](https://cz-git.qbb.sh) —Commitizen adapter, that assists in formatting git commits.
+  - Installation: `brew install czg`
 
 <br>
 

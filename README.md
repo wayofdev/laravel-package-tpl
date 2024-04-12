@@ -17,7 +17,9 @@
 <a href="https://packagist.org/packages/wayofdev/laravel-package-tpl"><img src="https://img.shields.io/packagist/l/wayofdev/laravel-package-tpl?style=flat-square&color=blue" alt="Software License"/></a>
 <a href="https://packagist.org/packages/wayofdev/laravel-package-tpl"><img alt="Commits since latest release" src="https://img.shields.io/github/commits-since/wayofdev/laravel-package-tpl/latest?style=flat-square"></a>
 <a href="https://packagist.org/packages/wayofdev/laravel-package-tpl"><img alt="PHP Version Require" src="https://poser.pugx.org/wayofdev/laravel-package-tpl/require/php?style=flat-square"></a>
+<a href="https://app.codecov.io/gh/wayofdev/laravel-package-tpl"><img alt="Codecov" src="https://img.shields.io/codecov/c/github/wayofdev/laravel-package-tpl?style=flat-square&logo=codecov"></a>
 </div>
+
 <br>
 
 # Laravel Package Template

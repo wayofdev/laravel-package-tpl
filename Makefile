@@ -232,7 +232,7 @@ test-cc: ## Run project php-unit and pest tests in coverage mode and build repor
 # Release
 # ------------------------------------------------------------------------------------
 commit:
-	cz commit
+	czg commit --config="./.github/.cz.config.js"
 .PHONY: commit
 
 #
