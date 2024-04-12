@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.4.1](https://github.com/wayofdev/laravel-package-tpl/compare/v2.4.0...v2.4.1) (2024-04-12)
+
+
+### Bug Fixes
+
+* create release action ([a92fe64](https://github.com/wayofdev/laravel-package-tpl/commit/a92fe64f340ab5b64f1e055382e2fa9d42000d1b))
+* migrate create release action ([eacf576](https://github.com/wayofdev/laravel-package-tpl/commit/eacf576d093173380437fc8cd45404cd190b0683))
+
+
+### Documentation
+
+* update readme ([6cfad22](https://github.com/wayofdev/laravel-package-tpl/commit/6cfad22fff76786edcc66a56bb83306e1f9781ab))
+* updating contributing guide ([04b04cb](https://github.com/wayofdev/laravel-package-tpl/commit/04b04cbdd801483a1af90d3dd284ddef5b9360a5))
+* updating contributing guide ([cbd35d6](https://github.com/wayofdev/laravel-package-tpl/commit/cbd35d612bcdfde7c2c9f7a282d66f763b62c6c1))
+* updating contributing guide ([6d96f1b](https://github.com/wayofdev/laravel-package-tpl/commit/6d96f1b5dcd44ad246143de93472089103460b6b))
+
 ## [2.4.0](https://github.com/wayofdev/laravel-package-tpl/compare/v2.3.0...v2.4.0) (2024-04-09)
 
 
