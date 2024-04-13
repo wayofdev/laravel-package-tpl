@@ -11,13 +11,15 @@
 <br>
 
 <div align="center">
-<a href="https://github.com/wayofdev/laravel-package-tpl/actions"><img alt="Build Status" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fwayofdev%2Flaravel-package-tpl%2Fbadge&style=flat-square"/></a>
-<a href="https://packagist.org/packages/wayofdev/laravel-package-tpl"><img src="https://img.shields.io/packagist/dt/wayofdev/laravel-package-tpl?&style=flat-square" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/wayofdev/laravel-package-tpl"><img src="https://img.shields.io/packagist/v/wayofdev/laravel-package-tpl?&style=flat-square" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/wayofdev/laravel-package-tpl"><img src="https://img.shields.io/packagist/l/wayofdev/laravel-package-tpl?style=flat-square&color=blue" alt="Software License"/></a>
-<a href="https://packagist.org/packages/wayofdev/laravel-package-tpl"><img alt="Commits since latest release" src="https://img.shields.io/github/commits-since/wayofdev/laravel-package-tpl/latest?style=flat-square"></a>
-<a href="https://packagist.org/packages/wayofdev/laravel-package-tpl"><img alt="PHP Version Require" src="https://poser.pugx.org/wayofdev/laravel-package-tpl/require/php?style=flat-square"></a>
-<a href="https://app.codecov.io/gh/wayofdev/laravel-package-tpl"><img alt="Codecov" src="https://img.shields.io/codecov/c/github/wayofdev/laravel-package-tpl?style=flat-square&logo=codecov"></a>
+<a href="https://github.com/wayofdev/laravel-package-tpl/actions" target="_blank"><img alt="Build Status" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fwayofdev%2Flaravel-package-tpl%2Fbadge&style=flat-square"/></a>
+<a href="https://packagist.org/packages/wayofdev/laravel-package-tpl" target="_blank"><img src="https://img.shields.io/packagist/dt/wayofdev/laravel-package-tpl?&style=flat-square" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/wayofdev/laravel-package-tpl" target="_blank"><img src="https://img.shields.io/packagist/v/wayofdev/laravel-package-tpl?&style=flat-square" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/wayofdev/laravel-package-tpl" target="_blank"><img src="https://img.shields.io/packagist/l/wayofdev/laravel-package-tpl?style=flat-square&color=blue" alt="Software License"/></a>
+<a href="https://packagist.org/packages/wayofdev/laravel-package-tpl" target="_blank"><img alt="Commits since latest release" src="https://img.shields.io/github/commits-since/wayofdev/laravel-package-tpl/latest?style=flat-square"></a>
+<a href="https://packagist.org/packages/wayofdev/laravel-package-tpl" target="_blank"><img alt="PHP Version Require" src="https://poser.pugx.org/wayofdev/laravel-package-tpl/require/php?style=flat-square"></a>
+<a href="https://app.codecov.io/gh/wayofdev/laravel-package-tpl" target="_blank"><img alt="Codecov" src="https://img.shields.io/codecov/c/github/wayofdev/laravel-package-tpl?style=flat-square&logo=codecov"></a>
+<a href="https://discord.gg/CE3TcCC5vr" target="_blank"><img alt="Codecov" src="https://img.shields.io/discord/1228506758562058391?style=flat-square&logo=discord&labelColor=7289d9&logoColor=white&color=39456d"></a>
+<a href="https://twitter.com/intent/follow?screen_name=wayofdev" target="_blank"><img src="https://img.shields.io/twitter/follow/wayofdev.svg?style=flat-square&logo=x&color=6e7781"></a>
 </div>
 
 <br>
@@ -74,12 +76,12 @@ This template repository includes several features to streamline the development
 
 * This package is equipped with a set of ready-to-use issue templates to streamline contributions and issue reporting.
 
-  You can find these templates organized in the `.github/ISSUE_TEMPLATE` directory.
+  You can find these templates organized in the [`.github/ISSUE_TEMPLATE`](.github/ISSUE_TEMPLATE) directory.
 
 ### → Miscellaneous
 
-- Support for PHP 8.2 and Laravel 10.x/11.x.
-- Configured autoload and autoload-dev for optimal namespace management.
+- Support for PHP 8.2+ and Laravel 10.x/11.x.
+- Configured `autoload` and `autoload-dev` for optimal namespace management.
 
 <br>
 
@@ -91,7 +93,10 @@ To use this template, clone the repository and install the dependencies:
 $ git clone https://github.com/wayofdev/laravel-package-tpl.git
 $ cd laravel-package-tpl
 
-$ composer install
+$ make env install
+
+### full list of available commands:
+$ make help
 ```
 
 <br>
@@ -144,16 +149,28 @@ This project has a [security policy](.github/SECURITY.md).
 
 <br>
 
-## 📥 Contributing
+## 🙌 Want to Contribute?
 
-Please read and follow our [contribution guide](.github/CONTRIBUTING.md).
+Thank you for considering contributing to the wayofdev community! We are open to all kinds of contributions. If you want to:
+
+- 🤔 Suggest a feature
+- 🐛 Report an issue
+- 📖 Improve documentation
+- 👨‍💻 Contribute to the code
+
+You are more than welcome. Before contributing, kindly check our [contribution guidelines](.github/CONTRIBUTING.md).
+
+<br>
+
+## 🌐 Social Links
+
+- **Twitter:** Follow our organization [@wayofdev](https://twitter.com/intent/follow?screen_name=wayofdev) and the author [@wlotyp](https://twitter.com/intent/follow?screen_name=wlotyp).
+- **Discord:** Join our community on [Discord](https://discord.gg/CE3TcCC5vr).
 
 <br>
 
 ## 🙆🏼‍♂️ Author Information
 
-Created in **2022** by [lotyp / wayofdev](https://github.com/wayofdev)
-
-Follow [@wayofdev](https://twitter.com/intent/follow?screen_name=wayofdev) on X (Twitter).
+Created in **2022** by [lotyp](https://github.com/wayofdev) @ [wayofdev](https://github.com/wayofdev)
 
 <br>
