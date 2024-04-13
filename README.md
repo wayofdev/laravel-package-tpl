@@ -70,6 +70,12 @@ This template repository includes several features to streamline the development
 - Docker support for consistent development environments.
 - [Pre-commit](https://pre-commit.com) hooks setup to ensure code quality before commits.
 
+### → Issue Templates
+
+* This package is equipped with a set of ready-to-use issue templates to streamline contributions and issue reporting.
+
+  You can find these templates organized in the `.github/ISSUE_TEMPLATE` directory.
+
 ### → Miscellaneous
 
 - Support for PHP 8.2 and Laravel 10.x/11.x.
@@ -132,9 +138,15 @@ $ make lint-yaml
 
 <br>
 
+## 🔒 Security Policy
+
+This project has a [security policy](.github/SECURITY.md).
+
+<br>
+
 ## 📥 Contributing
 
-The maintainers of this project suggest following the [contribution guide](https://github.com/wayofdev/laravel-package-tpl/blob/master/.github/CONTRIBUTING.md).
+Please read and follow our [contribution guide](.github/CONTRIBUTING.md).
 
 <br>
 
@@ -142,6 +154,6 @@ The maintainers of this project suggest following the [contribution guide](https
 
 Created in **2022** by [lotyp / wayofdev](https://github.com/wayofdev)
 
-Follow [@wayofdev](https://twitter.com/intent/follow?screen_name=wayofdev) on Twitter.
+Follow [@wayofdev](https://twitter.com/intent/follow?screen_name=wayofdev) on X (Twitter).
 
 <br>
