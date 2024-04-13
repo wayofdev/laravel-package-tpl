@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.2](https://github.com/wayofdev/laravel-package-tpl/compare/v2.5.1...v2.5.2) (2024-04-13)
+
+
+### Documentation
+
+* update readme, badges ([c88e8ac](https://github.com/wayofdev/laravel-package-tpl/commit/c88e8ac19d5843f35523895c093909897096d370))
+
 ## [2.5.1](https://github.com/wayofdev/laravel-package-tpl/compare/v2.5.0...v2.5.1) (2024-04-12)
 
 
