@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.3](https://github.com/wayofdev/laravel-package-tpl/compare/v2.5.2...v2.5.3) (2024-04-13)
+
+
+### Bug Fixes
+
+* ignore dev files in github releases ([204f17b](https://github.com/wayofdev/laravel-package-tpl/commit/204f17b62bd32f425426499fd241c8d2f603074f))
+
 ## [2.5.2](https://github.com/wayofdev/laravel-package-tpl/compare/v2.5.1...v2.5.2) (2024-04-13)
 
 
