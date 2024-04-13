@@ -2,8 +2,8 @@
 
 name: 🧪 Failing Test
 description: Report failing tests or CI jobs.
-title: "[Test]: "
-labels: ["Type: Test"]
+title: '[Test]: '
+labels: ['Type: Test']
 
 assignees:
   - lotyp

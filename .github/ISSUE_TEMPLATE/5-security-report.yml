@@ -1,0 +1,82 @@
+---
+
+name: ⚠️ Security Report
+description: Report a security issue to help improve the project's safety.
+title: '[Security]: '
+labels: ['type: bug', 'priority: high', 'type: security']
+
+assignees:
+  - lotyp
+
+body:
+  - type: markdown
+    attributes:
+      value: ⚠️ **Security Report**
+
+  - type: textarea
+    id: security-issue-description
+    attributes:
+      label: Describe the security issue
+      description: Provide a clear and concise description of what the security issue is, without including sensitive details.
+      placeholder: Describe the security issue...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: To Reproduce
+      description: |
+        Steps to reproduce the security issue:
+        1. Navigate to...
+        2. Perform action...
+        3. Observe outcome...
+      placeholder: |
+        1. Navigate to...
+        2. Perform action...
+        3. Observe outcome...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behaviour
+    attributes:
+      label: Expected behaviour
+      description: Describe what you expected to happen without the security flaw.
+      placeholder: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: media-prove
+    attributes:
+      label: Media prove
+      description: If applicable, add screenshots or videos that help explain your issue, ensuring no sensitive data is displayed.
+      placeholder: Upload files or paste links here...
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Your environment
+      description: |
+        Provide detailed information about your environment to help us replicate the issue:
+        * OS: [e.g. Ubuntu]
+        * PHP version: [e.g. 8.2.2]
+        * Package version: [e.g. 1.0.0]
+        * Any relevant environment details
+      placeholder: List your environment details here...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here, ensuring no sensitive data is included.
+      placeholder: Any additional information...
+    validations:
+      required: false
+
+...

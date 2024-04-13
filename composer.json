@@ -83,8 +83,8 @@
     "scripts": {
         "cs:diff": "php vendor/bin/php-cs-fixer fix --dry-run -v --diff",
         "cs:fix": "php vendor/bin/php-cs-fixer fix -v",
-        "infect": "XDEBUG_MODE=coverage php vendor/bin/infection --min-msi=55 --min-covered-msi=55",
-        "infect:ci": "XDEBUG_MODE=coverage php vendor/bin/infection --min-msi=55 --min-covered-msi=55 --ansi --configuration=infection.json.dist --logger-github",
+        "infect": "XDEBUG_MODE=coverage php vendor/bin/infection --configuration=infection.json.dist",
+        "infect:ci": "XDEBUG_MODE=coverage php vendor/bin/infection --ansi --configuration=infection.json.dist --logger-github",
         "refactor": "php vendor/bin/rector process --config=rector.php",
         "refactor:ci": "php vendor/bin/rector process --config=rector.php --dry-run --ansi",
         "stan": "php vendor/bin/phpstan analyse --memory-limit=2G",
