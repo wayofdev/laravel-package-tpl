@@ -57,11 +57,12 @@ Refer to the output of `make help` for a comprehensive list of available command
 
 - **Fork the Repository**: Start by forking the repository to your GitHub account.
 - **Create a Branch**: In your fork, create a new branch for your work. Name it appropriately based on the feature, fix, or update you're working on.
-- **Make Your Changes**: Implement your changes, commit them, and push the branch to your fork.
+- **Make Your Changes**: Implement your changes
 - **Run Tests**: Ensure all tests pass and the code adheres to the coding standards.
 - **Update Documentation**: If you've made changes that affect the project's documentation, ensure it is updated.
 - **Run Linters**: Ensure your code passes all linting checks using `make lint`.
 - **Commit Your Changes**: Use the [Conventional Commits](#-commit-message-guidelines) standard for your commit messages. You can use `make commit` to assist in creating commit messages.
+- **Push Your Changes**: Push your branch to your fork on GitHub.
 - **Open a Pull Request**: Submit a pull request to the `master` branch of the original repository. Ensure your PR is focused, addressing a single feature, fix, or improvement.
 
 <br>

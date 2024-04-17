@@ -209,7 +209,7 @@ jobs:
           trust-gpg-keys: '0x033E5F8D801A2F8D'
 
       - name: 🔬 Run maglnet/composer-require-checker
-        run: .phive/composer-require-checker check --ansi --config-file="$(pwd)"/composer-require-checker.json --verbose
+        run: .phive/composer-require-checker check --ansi --config-file="$(pwd)/composer-require-checker.json" --verbose
 
   mutation-testing:
     timeout-minutes: 16
