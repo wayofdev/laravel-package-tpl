@@ -174,3 +174,9 @@ You are more than welcome. Before contributing, kindly check our [contribution g
 Created in **2022** by [lotyp](https://github.com/wayofdev) @ [wayofdev](https://github.com/wayofdev)
 
 <br>
+
+## 🫡 Contributors
+
+<img align="left" src="https://img.shields.io/github/contributors-anon/wayofdev/laravel-package-tpl?style=for-the-badge" alt="Contributors Badge"/>
+
+<br>

@@ -5,8 +5,11 @@
 # https://docs.docker.com/compose/environment-variables/envvars/
 export DOCKER_BUILDKIT ?= 1
 
+# Docker binary to use, when executing docker tasks
+DOCKER ?= docker
+
 # Binary to use, when executing docker-compose tasks
-DOCKER_COMPOSE ?= docker compose
+DOCKER_COMPOSE ?= $(DOCKER) compose
 
 # Support image with all needed binaries, like envsubst, mkcert, wait4x
 SUPPORT_IMAGE ?= wayofdev/build-deps:alpine-latest
@@ -14,7 +17,7 @@ SUPPORT_IMAGE ?= wayofdev/build-deps:alpine-latest
 APP_RUNNER ?= $(DOCKER_COMPOSE) run --rm --no-deps app
 APP_COMPOSER ?= $(APP_RUNNER) composer
 
-BUILDER_PARAMS ?= docker run --rm -i \
+BUILDER_PARAMS ?= $(DOCKER) run --rm -i \
 	--env-file ./.env \
 	--env COMPOSE_PROJECT_NAME=$(COMPOSE_PROJECT_NAME) \
 	--env COMPOSER_AUTH="$(COMPOSER_AUTH)"
@@ -26,10 +29,16 @@ BUILDER_WIRED ?= $(BUILDER_PARAMS) --network project.$(COMPOSE_PROJECT_NAME) $(S
 ENVSUBST ?= $(BUILDER) envsubst
 
 # Yamllint docker image
-YAML_LINT_RUNNER ?= docker run --rm $$(tty -s && echo "-it" || echo) \
+YAML_LINT_RUNNER ?= $(DOCKER) run --rm $$(tty -s && echo "-it" || echo) \
 	-v $(PWD):/data \
 	cytopia/yamllint:latest \
 	-f colored .
+
+ACTION_LINT_RUNNER ?= $(DOCKER) run --rm $$(tty -s && echo "-it" || echo) \
+	-v $(shell pwd):/repo \
+	 --workdir /repo \
+	 rhysd/actionlint:latest \
+	 -color
 
 PHIVE_RUNNER ?= $(DOCKER_COMPOSE) run --rm --no-deps app
 
@@ -68,7 +77,7 @@ MAKE_CMD_COLOR := $(BLUE)
 
 default: all
 
-help:
+help: ## Show this menu
 	@echo 'Management commands for package:'
 	@echo 'Usage:'
 	@echo '    ${MAKE_CMD_COLOR}make${RST}                       Setups dependencies for fresh-project, like composer install, git hooks and others...'
@@ -168,12 +177,16 @@ hooks: ## Install git hooks from pre-commit-config
 	pre-commit autoupdate
 .PHONY: hooks
 
-lint: lint-yaml lint-php lint-stan lint-composer lint-audit ## Runs all linting commands
+lint: lint-yaml lint-actions lint-php lint-stan lint-composer lint-audit ## Runs all linting commands
 .PHONY: lint
 
 lint-yaml: ## Lints yaml files inside project
 	@$(YAML_LINT_RUNNER)
 .PHONY: lint-yaml
+
+lint-actions: ## Lint all github actions
+	@$(ACTION_LINT_RUNNER)
+.PHONY: lint-actions
 
 lint-php: prepare ## Fixes code to follow coding standards using php-cs-fixer
 	$(APP_COMPOSER) cs:fix
