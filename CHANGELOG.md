@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.5](https://github.com/wayofdev/laravel-package-tpl/compare/v2.5.4...v2.5.5) (2024-04-19)
+
+
+### Documentation
+
+* updating readme ([9389aea](https://github.com/wayofdev/laravel-package-tpl/commit/9389aea6e26d497a27dd15f6d4285852b2dc219e))
+
 ## [2.5.4](https://github.com/wayofdev/laravel-package-tpl/compare/v2.5.3...v2.5.4) (2024-04-19)
 
 
