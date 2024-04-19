@@ -6,7 +6,7 @@ Thank you for helping keep `wayofdev/laravel-package-tpl` and its users safe. We
 
 ## 🙋‍♂️ Supported Versions
 
-Only certain versions of `wayofdev/laravel-package-tpl` are currently being maintained with security updates. Below is a list of supported versions that receive security updates:
+Only certain versions of `wayofdev/laravel-package-tpl` are currently being maintained with security updates. Please use or upgrade to one of these supported versions:
 
 | Version | Supported          |
 |---------|--------------------|
@@ -16,7 +16,7 @@ Please ensure that you are using one of these supported versions before reportin
 
 <br>
 
-## 🗑️ Unsupported Versions
+## 🗜️ Unsupported Versions
 
 Versions listed below are no longer supported with security updates. We recommend upgrading to a supported version as soon as possible:
 
@@ -28,12 +28,20 @@ Versions listed below are no longer supported with security updates. We recommen
 
 ## 🚨 Reporting a Vulnerability
 
-We take all security bugs in `wayofdev/laravel-package-tpl` seriously. Thank you for improving the security of this project. We appreciate your efforts and responsible disclosure and will make every effort to acknowledge your contributions.
+We take all security bugs in `wayofdev/laravel-package-tpl` seriously. Please follow the instructions below to report security vulnerabilities.
 
 ### → How to Report a Vulnerability
 
-1. **Direct Contact**: For highly sensitive information, please email us directly at `the@wayof.dev` with the subject line "SECURITY - Vulnerability Report". This will be treated with the highest priority.
+1. **GitHub Security Advisories**: Please report security issues directly through our GitHub Security Advisories page: https://github.com/wayofdev/laravel-package-tpl/security/advisories/new. This ensures that sensitive information is handled confidentially.
 
-2. **GitHub Issues**: For vulnerabilities that do not immediately affect the security of the application or its users, such as those found in non-critical systems, please report them through our GitHub issues. Make sure to use the `⚠️ Security Report` issue template. Please do not include sensitive information in GitHub issues. Detailed instructions about how to fill this report are included within the issue template itself.
+2. **Empty Security Issue**: After submitting through GitHub Security Advisories, please also create an empty security issue to alert us, as GitHub Advisories do not send automatic notifications. This can be done here: https://github.com/wayofdev/laravel-package-tpl/issues/new?assignees=&labels=type%3A+bug%2Cpriority%3A+high%2Ctype%3A+security&projects=&template=5-security-report.yml&title=%5BSecurity%5D%3A+
+
+3. **Direct Contact**: For highly sensitive information, in addition to the GitHub Security Advisories, please email us directly at `the@wayof.dev` with the subject line "SECURITY - Vulnerability Report". This will be treated with the highest priority.
+
+Please do not discuss potential security issues in public forums or through our public GitHub issues tracker.
+
+## ❌ Third-Party Bug Bounty Platforms
+
+At this moment, we DO NOT accept reports from third-party bug bounty platforms to minimize risk. All vulnerability reports should come through the specified channels above.
 
 <br>
