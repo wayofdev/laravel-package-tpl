@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.6.0](https://github.com/wayofdev/laravel-package-tpl/compare/v2.5.5...v2.6.0) (2024-04-20)
+
+
+### Features
+
+* support for new tools ([f623e28](https://github.com/wayofdev/laravel-package-tpl/commit/f623e28d851223330715623eaf7a9f8ec5fd2dcd))
+
+
+### Documentation
+
+* remove email link ([f623e28](https://github.com/wayofdev/laravel-package-tpl/commit/f623e28d851223330715623eaf7a9f8ec5fd2dcd))
+
 ## [2.5.5](https://github.com/wayofdev/laravel-package-tpl/compare/v2.5.4...v2.5.5) (2024-04-19)
 
 
