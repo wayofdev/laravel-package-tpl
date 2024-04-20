@@ -237,7 +237,7 @@ jobs:
         uses: shivammathur/setup-php@2.30.2
         with:
           php-version: ${{ matrix.php-version }}
-          extensions: mbstring, pdo, pdo_sqlite, uopz
+          extensions: mbstring, pdo, pdo_sqlite
           ini-values: error_reporting=E_ALL
           coverage: xdebug
 
