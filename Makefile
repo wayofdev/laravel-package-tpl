@@ -208,6 +208,18 @@ lint-stan-baseline: ## Runs phpstan to update its baseline
 	$(APP_COMPOSER) stan:baseline
 .PHONY: lint-stan-baseline
 
+lint-psalm: ## Runs vimeo/psalm – static analysis tool
+	$(APP_COMPOSER) psalm
+.PHONY: lint-psalm
+
+lint-psalm-ci: ## Runs vimeo/psalm – static analysis tool with github output (CI mode)
+	$(APP_COMPOSER) psalm:ci
+.PHONY: lint-psalm-ci
+
+lint-psalm-baseline: ## Runs vimeo/psalm to update its baseline
+	$(APP_COMPOSER) psalm:baseline
+.PHONY: lint-psalm-baseline
+
 lint-deps: ## Runs composer-require-checker – checks for dependencies that are not used
 	$(APP_RUNNER) .phive/composer-require-checker check \
 		--config-file=/app/composer-require-checker.json \

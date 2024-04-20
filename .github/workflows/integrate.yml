@@ -261,6 +261,8 @@ jobs:
 
       - name: 🧪 Run mutation testing using Xdebug and infection/infection
         run: composer infect:ci
+        env:
+          STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_DASHBOARD_API_KEY }}
 
   security-analysis:
     timeout-minutes: 4

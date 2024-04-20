@@ -230,29 +230,34 @@ to run mutation tests.
 
 ## ⚙️ Static Code Analysis
 
-We use [`phpstan/phpstan`](https://github.com/phpstan/phpstan) to statically analyze the code.
+We use both [`phpstan/phpstan`](https://github.com/phpstan/phpstan) and [`vimeo/psalm`](https://github.com/vimeo/psalm) to statically analyze the code.
 
 Run
 
 ```sh
 $ make lint-stan
+$ make lint-psalm
 ```
 
 to run a static code analysis.
 
-We also use the baseline features of [`phpstan/phpstan`](https://phpstan.org/user-guide/baseline).
+We also use the baseline features of [`phpstan/phpstan`](https://phpstan.org/user-guide/baseline) and [`vimeo/psalm`](https://psalm.dev/docs/running_psalm/dealing_with_code_issues/#using-a-baseline-file) to ignore existing issues.
 
 Run
 
 ```sh
 $ make lint-stan-baseline
+$ make lint-psalm-baseline
 ```
 
-to regenerate the baselines in [`../phpstan-baseline.neon`](../phpstan-baseline.neon).
+to regenerate the baselines in:
+
+- [`../phpstan-baseline.neon`](../phpstan-baseline.neon).
+- [`../psalm-baseline.xml`](../psalm-baseline.xml).
 
 > [!IMPORTANT]
 >
-> Ideally, the baseline file should stay empty or shrink over time.
+> Ideally, the baseline files should stay empty or shrink over time.
 
 <br>
 

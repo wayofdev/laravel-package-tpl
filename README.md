@@ -50,12 +50,14 @@ This template repository includes several features to streamline the development
 - [Orchestra Testbench](https://packages.tools/testbench.html) for Laravel package testing.
 - [PHPStan](https://phpstan.org) extensions for PHPUnit and Laravel.
 - Infection for mutation testing to ensure quality.
+- Mutation test reports are uploaded [Stryker Mutator Dashboard](https://dashboard.stryker-mutator.io).
 
 ### → Static Analysis
 
 - [PHPStan](https://phpstan.org) for static analysis, ensuring code quality and robustness.
 - [Larastan](https://github.com/larastan/larastan) for Laravel-specific static analysis.
 - [PHPStan strict rules](https://github.com/phpstan/phpstan-strict-rules) for enforcing strict type checks and standards.
+- [Psalm](https://psalm.dev) for finding errors in PHP applications through static analysis.
 
 ### → Coding Standards:
 
@@ -67,9 +69,9 @@ This template repository includes several features to streamline the development
 - Automated testing with code coverage report generation using PHPUnit and Xdebug, uploaded to [Codecov](https://about.codecov.io).
 - Automated linting of YAML files and PHP code to ensure consistency and adherence to best practices.
 - Checks for outdated or insecure dependencies using Composer.
-- Mutation testing with [Infection](https://github.com/infection/infection) to assess the quality of the test suite.
+- Mutation testing with [Infection](https://github.com/infection/infection) and [Stryker Mutator](https://stryker-mutator.io) to assess the quality of the test suite.
 - Security checks to identify vulnerabilities in dependencies.
-- Comprehensive static analysis with [PHPStan](https://phpstan.org) to detect potential issues early.
+- Comprehensive static analysis with [PHPStan](https://phpstan.org) and [Psalm](https://psalm.dev).
 - Extensive testing across different setups to ensure compatibility and stability.
 
 ### → Development Environment

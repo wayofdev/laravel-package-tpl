@@ -1,7 +1,10 @@
 {
     "ignoreMsiWithNoMutations": true,
     "logs": {
-        "text": ".build/infection/infection-log.txt"
+        "text": ".build/infection/infection-log.txt",
+        "stryker": {
+            "report": "master"
+        }
     },
     "minCoveredMsi": 55,
     "minMsi": 55,

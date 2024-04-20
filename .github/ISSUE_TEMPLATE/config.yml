@@ -11,6 +11,4 @@ contact_links:
     url: https://discord.gg/CE3TcCC5vr
     about: Join our Discord community to get help, share your ideas, and chat with other developers.
 
-  - name: Send an e-mail to the developer
-    url: mailto:the@wayof.dev
-    about: Please do NOT use this email to post issues or feature requests (only important business/personal contact).
+...
