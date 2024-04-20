@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.2](https://github.com/wayofdev/laravel-package-tpl/compare/v2.6.1...v2.6.2) (2024-04-20)
+
+
+### Documentation
+
+* add issue links ([cc3f853](https://github.com/wayofdev/laravel-package-tpl/commit/cc3f853af75936afb52374dac0d4cd87e2ceb966))
+
 ## [2.6.1](https://github.com/wayofdev/laravel-package-tpl/compare/v2.6.0...v2.6.1) (2024-04-20)
 
 
