@@ -160,7 +160,7 @@ This project has a [security policy](.github/SECURITY.md).
 Thank you for considering contributing to the wayofdev community! We are open to all kinds of contributions. If you want to:
 
 - 🤔 [Suggest a feature](https://github.com/wayofdev/laravel-package-tpl/issues/new?assignees=&labels=type%3A+enhancement&projects=&template=2-feature-request.yml&title=%5BFeature%5D%3A+)
-- 🐛 [Report an issue](https://github.com/wayofdev/laravel-package-tpl/issues/new?assignees=&labels=type%3A+documentation%2Ctype%3A+maintenance&projects=&template=4-docs-bug-report.yml&title=%5BDocs%5D%3A+)
+- 🐛 [Report an issue](https://github.com/wayofdev/laravel-package-tpl/issues/new?assignees=&labels=type%3A+documentation%2Ctype%3A+maintenance&projects=&template=1-bug-report.yml&title=%5BBug%5D%3A+)
 - 📖 [Improve documentation](https://github.com/wayofdev/laravel-package-tpl/issues/new?assignees=&labels=type%3A+documentation%2Ctype%3A+maintenance&projects=&template=4-docs-bug-report.yml&title=%5BDocs%5D%3A+)
 - 👨‍💻 Contribute to the code
 
