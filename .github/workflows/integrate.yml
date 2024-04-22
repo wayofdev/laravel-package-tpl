@@ -19,7 +19,7 @@ jobs:
       pull-requests: read
     steps:
       - name: 📦 Check out the codebase
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.1.3
 
       # See: https://github.com/wagoid/commitlint-github-action
       - name: 🧐 Lint commits using "commitlint"
@@ -48,7 +48,7 @@ jobs:
 
     steps:
       - name: 📦 Check out the codebase
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.1.3
 
       - name: 🛠️ Setup PHP
         uses: shivammathur/setup-php@2.30.3
@@ -109,7 +109,7 @@ jobs:
 
     steps:
       - name: 📦 Check out the codebase
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.1.3
 
       - name: 🧐 Lint YAML files
         uses: ibiqlik/action-yamllint@v3.1.1
@@ -173,7 +173,7 @@ jobs:
           - locked
     steps:
       - name: 📦 Check out the codebase
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.1.3
 
       - name: 🛠️ Setup PHP
         uses: shivammathur/setup-php@2.30.3
@@ -231,7 +231,7 @@ jobs:
           - locked
     steps:
       - name: 📦 Check out the codebase
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.1.3
 
       - name: 🛠️ Setup PHP
         uses: shivammathur/setup-php@2.30.3
@@ -284,7 +284,7 @@ jobs:
           - locked
     steps:
       - name: 📦 Check out the codebase
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.1.3
 
       - name: 🛠️ Setup PHP
         uses: shivammathur/setup-php@2.30.3
@@ -335,7 +335,7 @@ jobs:
           - locked
     steps:
       - name: 📦 Check out the codebase
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.1.3
 
       - name: 🛠️ Setup PHP
         uses: shivammathur/setup-php@2.30.3
@@ -389,7 +389,7 @@ jobs:
           - highest
     steps:
       - name: 📦 Check out the codebase
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.1.3
 
       - name: 🛠️ Setup PHP
         uses: shivammathur/setup-php@2.30.3
@@ -444,7 +444,7 @@ jobs:
           - locked
     steps:
       - name: 📦 Check out the codebase
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.1.3
 
       - name: 🛠️ Setup PHP
         uses: shivammathur/setup-php@2.30.3
