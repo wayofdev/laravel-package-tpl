@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.6.3](https://github.com/wayofdev/laravel-package-tpl/compare/v2.6.2...v2.6.3) (2024-04-22)
+
+
+### Bug Fixes
+
+* change composer description ([2199e5f](https://github.com/wayofdev/laravel-package-tpl/commit/2199e5f53b013a339ee918417a88d88d963600d7))
+
+
+### Documentation
+
+* add support for rector-php ([f325435](https://github.com/wayofdev/laravel-package-tpl/commit/f325435e1c90ed4bbe8800dae0e892899a7d1508))
+* link fixes in readme ([ea96f97](https://github.com/wayofdev/laravel-package-tpl/commit/ea96f9772df5a8ea01b226c19ea8a48118e3cc99))
+
 ## [2.6.2](https://github.com/wayofdev/laravel-package-tpl/compare/v2.6.1...v2.6.2) (2024-04-20)
 
 
