@@ -88,6 +88,7 @@ help: ## Show this menu
 	@echo '    📦 Package                 laravel-package-tpl (github.com/wayofdev/laravel-package-tpl)'
 	@echo '    🤠 Author                  Andrij Orlenko (github.com/lotyp)'
 	@echo '    🏢 ${YELLOW}Org                     wayofdev (github.com/wayofdev)${RST}'
+	@echo
 .PHONY: help
 
 .EXPORT_ALL_VARIABLES:
@@ -181,11 +182,11 @@ lint: lint-yaml lint-actions lint-php lint-stan lint-composer lint-audit ## Runs
 .PHONY: lint
 
 lint-yaml: ## Lints yaml files inside project
-	@$(YAML_LINT_RUNNER)
+	@$(YAML_LINT_RUNNER) | tee -a $(MAKE_LOGFILE)
 .PHONY: lint-yaml
 
 lint-actions: ## Lint all github actions
-	@$(ACTION_LINT_RUNNER)
+	@$(ACTION_LINT_RUNNER) | tee -a $(MAKE_LOGFILE)
 .PHONY: lint-actions
 
 lint-php: prepare ## Fixes code to follow coding standards using php-cs-fixer
@@ -266,6 +267,7 @@ commit:
 
 #
 # Documentation
+# Only in case, when `./docs` folder exists and has package.json
 # ------------------------------------------------------------------------------------
 docs-deps-update: ## Check for outdated dependencies and automatically update them using pnpm
 	cd docs && $(NPM_RUNNER) run deps:update
@@ -277,4 +279,8 @@ docs-deps-install: ## Install dependencies for documentation using pnpm
 
 docs-up: ## Start documentation server
 	cd docs && $(NPM_RUNNER) dev
+.PHONY: docs-up
+
+docs-build: ## Build documentation
+	cd docs && $(NPM_RUNNER) build
 .PHONY: docs-up
