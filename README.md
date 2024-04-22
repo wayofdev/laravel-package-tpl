@@ -57,6 +57,7 @@ This template repository includes several features to streamline the development
 - [Larastan](https://github.com/larastan/larastan) for Laravel-specific static analysis.
 - [PHPStan strict rules](https://github.com/phpstan/phpstan-strict-rules) for enforcing strict type checks and standards.
 - [Psalm](https://psalm.dev) for finding errors in PHP applications through static analysis.
+- [PHP Rector](https://github.com/rectorphp/rector) for automated code upgrades and refactoring, maintaining modern code standards.
 
 ### → Coding Standards:
 
