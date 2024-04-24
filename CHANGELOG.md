@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.7.0](https://github.com/wayofdev/laravel-package-tpl/compare/v2.6.3...v2.7.0) (2024-04-24)
+
+
+### Features
+
+* markdown-lint action and Makefile command ([2e63462](https://github.com/wayofdev/laravel-package-tpl/commit/2e634628731b5bff0114199853c34e024d291358))
+
+
+### Documentation
+
+* update readme ([368e987](https://github.com/wayofdev/laravel-package-tpl/commit/368e987bb81b97aa07069e20ca59a80f3b34d321))
+
 ## [2.6.3](https://github.com/wayofdev/laravel-package-tpl/compare/v2.6.2...v2.6.3) (2024-04-22)
 
 
