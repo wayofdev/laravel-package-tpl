@@ -29,4 +29,13 @@ repos:
         pass_filenames: false
         require_serial: true
 
+  - repo: local
+    hooks:
+      - id: markdownlint
+        name: markdownlint-cli2
+        description: Run markdownlint-cli2 on your Markdown files using the docker image
+        language: docker_image
+        types: [markdown]
+        entry: davidanson/markdownlint-cli2-rules:latest
+
 ...

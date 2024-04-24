@@ -17,11 +17,11 @@
 <a href="https://github.com/wayofdev/laravel-package-tpl/actions" target="_blank"><img alt="Build Status" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fwayofdev%2Flaravel-package-tpl%2Fbadge&style=flat-square&label=github%20actions"/></a>
 <a href="https://packagist.org/packages/wayofdev/laravel-package-tpl" target="_blank"><img src="https://img.shields.io/packagist/dt/wayofdev/laravel-package-tpl?&style=flat-square" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/wayofdev/laravel-package-tpl" target="_blank"><img src="https://img.shields.io/packagist/v/wayofdev/laravel-package-tpl?&style=flat-square" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/wayofdev/laravel-package-tpl" target="_blank"><img src="https://img.shields.io/packagist/l/wayofdev/laravel-package-tpl?style=flat-square&color=blue" alt="Software License"/></a>
 <a href="https://packagist.org/packages/wayofdev/laravel-package-tpl" target="_blank"><img alt="Commits since latest release" src="https://img.shields.io/github/commits-since/wayofdev/laravel-package-tpl/latest?style=flat-square"></a>
 <a href="https://packagist.org/packages/wayofdev/laravel-package-tpl" target="_blank"><img alt="PHP Version Require" src="https://poser.pugx.org/wayofdev/laravel-package-tpl/require/php?style=flat-square"></a>
 <a href="https://app.codecov.io/gh/wayofdev/laravel-package-tpl" target="_blank"><img alt="Codecov" src="https://img.shields.io/codecov/c/github/wayofdev/laravel-package-tpl?style=flat-square&logo=codecov"></a>
 <a href="https://dashboard.stryker-mutator.io/reports/github.com/wayofdev/laravel-package-tpl/master" target="_blank"><img alt="Mutation testing badge" src="https://img.shields.io/endpoint?style=flat-square&label=mutation%20score&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fwayofdev%2Flaravel-package-tpl%2Fmaster"></a>
+<a href=""><img src="https://img.shields.io/badge/phpstan%20level-6%20of%209-yellowgreen?style=flat-square" alt="PHP Stan Level 6 of 9"></a>
 <a href="https://discord.gg/CE3TcCC5vr" target="_blank"><img alt="Codecov" src="https://img.shields.io/discord/1228506758562058391?style=flat-square&logo=discord&labelColor=7289d9&logoColor=white&color=39456d"></a>
 <a href="https://x.com/intent/follow?screen_name=wayofdev" target="_blank"><img alt="Follow on Twitter (X)" src="https://img.shields.io/badge/-Follow-black?style=flat-square&logo=X"></a>
 </div>
@@ -59,7 +59,7 @@ This template repository includes several features to streamline the development
 - [Psalm](https://psalm.dev) for finding errors in PHP applications through static analysis.
 - [PHP Rector](https://github.com/rectorphp/rector) for automated code upgrades and refactoring, maintaining modern code standards.
 
-### → Coding Standards:
+### → Coding Standards
 
 - [PHP CS Fixer](https://github.com/wayofdev/php-cs-fixer-config) with custom configuration for consistent code style.
 - [Composer Normalize](https://github.com/ergebnis/composer-normalize) to ensure a consistent `composer.json` format.
@@ -81,7 +81,7 @@ This template repository includes several features to streamline the development
 
 ### → Issue Templates
 
-* This package is equipped with a set of ready-to-use issue templates to streamline contributions and issue reporting.
+- This package is equipped with a set of ready-to-use issue templates to streamline contributions and issue reporting.
 
   You can find these templates organized in the [`.github/ISSUE_TEMPLATE`](.github/ISSUE_TEMPLATE) directory.
 
@@ -115,7 +115,15 @@ $ make help
 To run tests, run the following command:
 
 ```bash
-$ make test
+make test
+```
+
+### → Mutation tests
+
+To run mutation tests, using [`infection/infection`](https://github.com/infection/infection):
+
+```bash
+make infect
 ```
 
 ### → Static Analysis
@@ -123,7 +131,13 @@ $ make test
 Code quality using PHPStan:
 
 ```bash
-$ make lint-stan
+make lint-stan
+```
+
+and using Psalm:
+
+```bash
+make lint-psalm
 ```
 
 ### → Coding Standards Fixing
@@ -131,7 +145,7 @@ $ make lint-stan
 Fix code using The PHP Coding Standards Fixer (PHP CS Fixer) to follow our standards:
 
 ```bash
-$ make lint-php
+make lint-php
 ```
 
 ### → Lint Yaml files
@@ -139,7 +153,23 @@ $ make lint-php
 Lint all yaml files in project:
 
 ```bash
-$ make lint-yaml
+make lint-yaml
+```
+
+### → Lint Markdown files
+
+Lint all yaml files in project:
+
+```bash
+make lint-md
+```
+
+### → Lint GitHub Actions
+
+Lint all yaml files in project:
+
+```bash
+make lint-actions
 ```
 
 <br>
@@ -168,7 +198,6 @@ Thank you for considering contributing to the wayofdev community! We are open to
 You are more than welcome. Before contributing, kindly check our [contribution guidelines](.github/CONTRIBUTING.md).
 
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=for-the-badge)](https://conventionalcommits.org)
-
 
 <br>
 

@@ -40,6 +40,11 @@ ACTION_LINT_RUNNER ?= $(DOCKER) run --rm $$(tty -s && echo "-it" || echo) \
 	 rhysd/actionlint:latest \
 	 -color
 
+MARKDOWN_LINT_RUNNER ?= $(DOCKER) run --rm $$(tty -s && echo "-it" || echo) \
+	-v $(shell pwd):/app \
+	--workdir /app \
+	davidanson/markdownlint-cli2-rules:latest
+
 PHIVE_RUNNER ?= $(DOCKER_COMPOSE) run --rm --no-deps app
 
 NPM_RUNNER ?= pnpm
@@ -178,7 +183,7 @@ hooks: ## Install git hooks from pre-commit-config
 	pre-commit autoupdate
 .PHONY: hooks
 
-lint: lint-yaml lint-actions lint-php lint-stan lint-composer lint-audit ## Runs all linting commands
+lint: lint-yaml lint-actions lint-md lint-php lint-stan lint-composer lint-audit ## Runs all linting commands
 .PHONY: lint
 
 lint-yaml: ## Lints yaml files inside project
@@ -188,6 +193,14 @@ lint-yaml: ## Lints yaml files inside project
 lint-actions: ## Lint all github actions
 	@$(ACTION_LINT_RUNNER) | tee -a $(MAKE_LOGFILE)
 .PHONY: lint-actions
+
+lint-md: ## Lint all markdown files using markdownlint-cli2
+	@$(MARKDOWN_LINT_RUNNER) --fix "**/*.md" "!CHANGELOG.md" "!vendor" | tee -a $(MAKE_LOGFILE)
+.PHONY: lint-md
+
+lint-md-dry: ## Lint all markdown files using markdownlint-cli2 in dry-run mode
+	@$(MARKDOWN_LINT_RUNNER) "**/*.md" "!CHANGELOG.md" "!vendor" | tee -a $(MAKE_LOGFILE)
+.PHONY: lint-md-dry
 
 lint-php: prepare ## Fixes code to follow coding standards using php-cs-fixer
 	$(APP_COMPOSER) cs:fix
