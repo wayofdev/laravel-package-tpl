@@ -30,7 +30,7 @@ Before you begin, you will need to set up your local development environment. He
 This project uses a Makefile to streamline common development tasks. The Makefile includes utilities for managing Docker environments, running tests, and linting code.
 
 ```bash
-$ make help
+make help
 ```
 
 ![Screenshot](../assets/screenshot.png)
@@ -74,7 +74,7 @@ This package leverages Docker to provide a consistent and isolated development e
 To run docker container:
 
 ```bash
-$ make up
+make up
 ```
 
 Other commands:
@@ -112,15 +112,15 @@ Our project employs [GitHub Actions](https://github.com/features/actions) for co
 
 <br>
 
-## ✉️ Commit Message Guidelines
+## 📩 Commit Message Guidelines
 
 We follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) standard. Please structure your commit messages as follows, using the appropriate prefix:
 
 **Examples:**
 
 ```bash
-$ git commit -am 'feat: some feature was introduced'
-$ git commit -am 'fix: something has been fixed'
+git commit -am 'feat: some feature was introduced'
+git commit -am 'fix: something has been fixed'
 ```
 
 **Allowed Prefixes:**
@@ -154,7 +154,7 @@ We use [`ergebnis/composer-normalize`](https://github.com/ergebnis/composer-norm
 Use:
 
 ```bash
-$ make lint-composer
+make lint-composer
 ```
 
 ### → Yaml Lint
@@ -164,7 +164,7 @@ We use [`yamllint`](https://github.com/adrienverge/yamllint) to enforce coding s
 To lint yaml files run:
 
 ```bash
-$ make lint-yaml
+make lint-yaml
 ```
 
 by default, [`cytopia/yamllint`](https://github.com/cytopia/docker-yamllint) Docker image will be used to run linter.
@@ -175,11 +175,10 @@ by default, [`cytopia/yamllint`](https://github.com/cytopia/docker-yamllint) Doc
 
 We use [`actionlint`](https://github.com/rhysd/actionlint) to enforce coding standards in GitHub Actions workflows.
 
-
 To lint GitHub Actions run:
 
 ```bash
-$ make lint-actions
+make lint-actions
 ```
 
 by default, [`rhysd/actionlint`](https://hub.docker.com/r/rhysd/actionlint/tags) Docker image will be used to run linter.
@@ -193,7 +192,7 @@ We use [`friendsofphp/php-cs-fixer`](https://github.com/FriendsOfPHP/PHP-CS-Fixe
 Run
 
 ```bash
-$ make lint-php
+make lint-php
 ```
 
 to automatically fix coding standard violations.
@@ -207,7 +206,7 @@ We use [`maglnet/composer-require-checker`](https://github.com/maglnet/ComposerR
 Run
 
 ```sh
-$ make lint-deps
+make lint-deps
 ```
 
 to run a dependency analysis.
@@ -221,7 +220,7 @@ We use [`infection/infection`](https://github.com/infection/infection) to ensure
 Xdebug support is enabled by default, when running commands through `Makefile`:
 
 ```sh
-$ make infect
+make infect
 ```
 
 to run mutation tests.
@@ -235,8 +234,8 @@ We use both [`phpstan/phpstan`](https://github.com/phpstan/phpstan) and [`vimeo/
 Run
 
 ```sh
-$ make lint-stan
-$ make lint-psalm
+make lint-stan
+make lint-psalm
 ```
 
 to run a static code analysis.
@@ -246,8 +245,8 @@ We also use the baseline features of [`phpstan/phpstan`](https://phpstan.org/use
 Run
 
 ```sh
-$ make lint-stan-baseline
-$ make lint-psalm-baseline
+make lint-stan-baseline
+make lint-psalm-baseline
 ```
 
 to regenerate the baselines in:
@@ -268,7 +267,7 @@ We use [`phpunit/phpunit`](https://github.com/sebastianbergmann/phpunit) and [`p
 Run
 
 ```sh
-$ make tests
+make tests
 ```
 
 to run all the tests.
@@ -294,5 +293,5 @@ Our pre-commit configuration includes several hooks:
 To utilize these hooks, you first need to install them using the command provided by the Makefile:
 
 ```bash
-$ make hooks
+make hooks
 ```
