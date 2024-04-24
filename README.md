@@ -67,7 +67,9 @@ This template repository includes several features to streamline the development
 ### → Continuous Integration
 
 - Automated testing with code coverage report generation using PHPUnit and Xdebug, uploaded to [Codecov](https://about.codecov.io).
-- Automated linting of YAML files and PHP code to ensure consistency and adherence to best practices.
+- Automated linting of YAML files using [ibiqlik/action-yamllint](https://github.com/ibiqlik/action-yamllint).
+- Automated PHP code linting to ensure code quality and standards using [wayofdev/php-cs-fixer-config](https://github.com/wayofdev/php-cs-fixer-config).
+- Markdown linting using [DavidAnson/markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2).
 - Checks for outdated or insecure dependencies using Composer.
 - Mutation testing with [Infection](https://github.com/infection/infection) and [Stryker Mutator](https://stryker-mutator.io) to assess the quality of the test suite.
 - Security checks to identify vulnerabilities in dependencies.
