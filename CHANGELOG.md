@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.7.1](https://github.com/wayofdev/laravel-package-tpl/compare/v2.7.0...v2.7.1) (2024-04-26)
+
+
+### Bug Fixes
+
+* add composer version, readme updates ([ba6da34](https://github.com/wayofdev/laravel-package-tpl/commit/ba6da345bc0fda6513c44882d0a631f2cbed8639))
+
+
+### Documentation
+
+* readme changes ([6e13e63](https://github.com/wayofdev/laravel-package-tpl/commit/6e13e6341aec97338c289bad2403506cff9b6e21))
+* readme changes ([0352364](https://github.com/wayofdev/laravel-package-tpl/commit/03523646bfcce61e953b57d9cfd12f46349da1a9))
+
 ## [2.7.0](https://github.com/wayofdev/laravel-package-tpl/compare/v2.6.3...v2.7.0) (2024-04-24)
 
 
