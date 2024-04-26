@@ -1,17 +1,14 @@
-<br>
-
 <div align="center">
+    <br>
     <a href="https://wayof.dev" target="_blank">
         <picture>
             <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/wayofdev/.github/master/assets/logo.gh-dark-mode-only.png">
             <img width="400" src="https://raw.githubusercontent.com/wayofdev/.github/master/assets/logo.gh-light-mode-only.png" alt="WayOfDev Logo">
         </picture>
     </a>
+    <br>
+    <br>
 </div>
-
-<br>
-
-<br>
 
 <div align="center">
 <a href="https://github.com/wayofdev/laravel-package-tpl/actions" target="_blank"><img alt="Build Status" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fwayofdev%2Flaravel-package-tpl%2Fbadge&style=flat-square&label=github%20actions"/></a>
@@ -176,12 +173,6 @@ make lint-actions
 
 <br>
 
-## 🤝 License
-
-[![Licence](https://img.shields.io/github/license/wayofdev/laravel-package-tpl?style=for-the-badge&color=blue)](./LICENSE.md)
-
-<br>
-
 ## 🔒 Security Policy
 
 This project has a [security policy](.github/SECURITY.md).
@@ -203,6 +194,14 @@ You are more than welcome. Before contributing, kindly check our [contribution g
 
 <br>
 
+## 🫡 Contributors
+
+<a href="https://github.com/wayofdev/laravel-package-tpl/graphs/contributors">
+    <img align="left" src="https://img.shields.io/github/contributors-anon/wayofdev/laravel-package-tpl?style=for-the-badge" alt="Contributors Badge"/>
+</a>
+
+<br>
+
 ## 🌐 Social Links
 
 - **Twitter:** Follow our organization [@wayofdev](https://twitter.com/intent/follow?screen_name=wayofdev) and the author [@wlotyp](https://twitter.com/intent/follow?screen_name=wlotyp).
@@ -210,16 +209,8 @@ You are more than welcome. Before contributing, kindly check our [contribution g
 
 <br>
 
-## 🙆🏼‍♂️ Author Information
+## ⚖️ License
 
-Created in **2022** by [lotyp](https://github.com/wayofdev) @ [wayofdev](https://github.com/wayofdev)
-
-<br>
-
-## 🫡 Contributors
-
-<a href="https://github.com/wayofdev/laravel-package-tpl/graphs/contributors">
-    <img align="left" src="https://img.shields.io/github/contributors-anon/wayofdev/laravel-package-tpl?style=for-the-badge" alt="Contributors Badge"/>
-</a>
+[![Licence](https://img.shields.io/github/license/wayofdev/laravel-package-tpl?style=for-the-badge&color=blue)](./LICENSE.md)
 
 <br>

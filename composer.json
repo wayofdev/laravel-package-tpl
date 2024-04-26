@@ -3,6 +3,7 @@
     "description": "🚀 Jump-start your Laravel package development with our pre-configured Composer template, designed for seamless integration. This template includes essential tools such as PHPUnit, PHPStan, GitHub Actions, and Docker to streamline your workflow and enhance productivity.",
     "license": "MIT",
     "type": "library",
+    "version": "2.7.0",
     "authors": [
         {
             "name": "lotyp",
