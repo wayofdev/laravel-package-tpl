@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.2](https://github.com/wayofdev/laravel-package-tpl/compare/v2.7.1...v2.7.2) (2024-04-28)
+
+
+### Documentation
+
+* update readme ([38c7255](https://github.com/wayofdev/laravel-package-tpl/commit/38c72555bd292042f509a8aaadac269cff5bec13))
+
 ## [2.7.1](https://github.com/wayofdev/laravel-package-tpl/compare/v2.7.0...v2.7.1) (2024-04-26)
 
 
