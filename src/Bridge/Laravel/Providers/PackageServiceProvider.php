@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace WayOfDev\Package\Bridge\Laravel\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use WayOfDev\Package\Bridge\Laravel\Console\Commands\PackageCommand;
 use WayOfDev\Package\Config;
 
 final class PackageServiceProvider extends ServiceProvider
@@ -33,6 +34,8 @@ final class PackageServiceProvider extends ServiceProvider
 
     private function registerConsoleCommands(): void
     {
-        $this->commands([]);
+        $this->commands([
+            PackageCommand::class,
+        ]);
     }
 }
