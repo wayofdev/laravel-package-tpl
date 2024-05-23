@@ -7308,16 +7308,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.57.1",
+            "version": "v3.57.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
-                "reference": "3f7efe667a8c9818aacceee478add7c0fc24cb21"
+                "reference": "22f7f3145606df92b02fb1bd22c30abfce956d3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/3f7efe667a8c9818aacceee478add7c0fc24cb21",
-                "reference": "3f7efe667a8c9818aacceee478add7c0fc24cb21",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/22f7f3145606df92b02fb1bd22c30abfce956d3c",
+                "reference": "22f7f3145606df92b02fb1bd22c30abfce956d3c",
                 "shasum": ""
             },
             "require": {
@@ -7396,7 +7396,7 @@
             ],
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues",
-                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.57.1"
+                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.57.2"
             },
             "funding": [
                 {
@@ -7404,7 +7404,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-05-15T22:01:07+00:00"
+            "time": "2024-05-20T20:41:57+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -14196,31 +14196,34 @@
         },
         {
             "name": "wayofdev/cs-fixer-config",
-            "version": "v1.3.0",
+            "version": "v1.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wayofdev/php-cs-fixer-config.git",
-                "reference": "0ae3048d39e6374cba2e728bd62227fa8f67b91c"
+                "reference": "8d0578a412be010919a0109cf484f95742cf5291"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wayofdev/php-cs-fixer-config/zipball/0ae3048d39e6374cba2e728bd62227fa8f67b91c",
-                "reference": "0ae3048d39e6374cba2e728bd62227fa8f67b91c",
+                "url": "https://api.github.com/repos/wayofdev/php-cs-fixer-config/zipball/8d0578a412be010919a0109cf484f95742cf5291",
+                "reference": "8d0578a412be010919a0109cf484f95742cf5291",
                 "shasum": ""
             },
             "require": {
-                "friendsofphp/php-cs-fixer": "^3.14.4",
+                "friendsofphp/php-cs-fixer": "^3.57",
                 "php": "^8.1"
             },
             "require-dev": {
-                "ergebnis/composer-normalize": "^2.30.2",
-                "phpstan/extension-installer": "^1.2.0",
-                "phpstan/phpstan": "^1.10.5",
-                "phpstan/phpstan-deprecation-rules": "^1.1.2",
-                "phpstan/phpstan-phpunit": "^1.3.10",
-                "phpstan/phpstan-strict-rules": "^1.5.0",
-                "phpunit/phpunit": "^10.0.14",
-                "roave/security-advisories": "dev-latest"
+                "ergebnis/phpunit-slow-test-detector": "^2.14",
+                "pestphp/pest": "^2.34",
+                "phpstan/extension-installer": "^1.3",
+                "phpstan/phpstan": "^1.11",
+                "phpstan/phpstan-deprecation-rules": "^1.2",
+                "phpstan/phpstan-phpunit": "^1.4",
+                "phpstan/phpstan-strict-rules": "^1.6",
+                "phpunit/phpunit": "^10.5",
+                "psalm/plugin-phpunit": "~0.19.0",
+                "roave/infection-static-analysis-plugin": "^1.35",
+                "vimeo/psalm": "^5.23.1"
             },
             "type": "library",
             "extra": {
@@ -14246,6 +14249,17 @@
             ],
             "description": "Package adds custom rule-sets to php-cs-fixer",
             "homepage": "https://wayof.dev",
+            "keywords": [
+                "code-quality",
+                "code-standards",
+                "code-style",
+                "configuration",
+                "php",
+                "php-cs-fixer",
+                "php-cs-fixer-config",
+                "php-cs-fixer-rules",
+                "static-analysis"
+            ],
             "support": {
                 "issues": "https://github.com/wayofdev/php-cs-fixer-config/issues",
                 "source": "https://github.com/wayofdev/php-cs-fixer-config"
@@ -14256,7 +14270,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-05-18T11:10:37+00:00"
+            "time": "2024-05-23T14:54:07+00:00"
         },
         {
             "name": "zbateson/mail-mime-parser",
