@@ -9,9 +9,8 @@ parameters:
         - tests/
         - .php-cs-fixer.dist.php
         - rector.php
-
-    checkMissingIterableValueType: false
+    excludePaths:
+        - tests/src/Arch
     checkOctaneCompatibility: true
     checkModelProperties: true
-
     tmpDir: .build/phpstan/

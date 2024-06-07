@@ -5,6 +5,10 @@
 # https://docs.docker.com/compose/environment-variables/envvars/
 export DOCKER_BUILDKIT ?= 1
 
+# User ID and Group ID to use inside docker containers
+HOST_UID ?= $(shell id -u)
+HOST_GID ?= $(shell id -g)
+
 # Docker binary to use, when executing docker tasks
 DOCKER ?= docker
 
@@ -32,6 +36,7 @@ ENVSUBST ?= $(BUILDER) envsubst
 YAML_LINT_RUNNER ?= $(DOCKER) run --rm $$(tty -s && echo "-it" || echo) \
 	-v $(PWD):/data \
 	cytopia/yamllint:latest \
+	-c ./.github/.yamllint.yaml \
 	-f colored .
 
 ACTION_LINT_RUNNER ?= $(DOCKER) run --rm $$(tty -s && echo "-it" || echo) \
@@ -43,7 +48,8 @@ ACTION_LINT_RUNNER ?= $(DOCKER) run --rm $$(tty -s && echo "-it" || echo) \
 MARKDOWN_LINT_RUNNER ?= $(DOCKER) run --rm $$(tty -s && echo "-it" || echo) \
 	-v $(shell pwd):/app \
 	--workdir /app \
-	davidanson/markdownlint-cli2-rules:latest
+	davidanson/markdownlint-cli2-rules:latest \
+	--config ".github/.markdownlint.json"
 
 PHIVE_RUNNER ?= $(DOCKER_COMPOSE) run --rm --no-deps app
 
@@ -51,7 +57,9 @@ NPM_RUNNER ?= pnpm
 
 EXPORT_VARS = '\
 	$${COMPOSE_PROJECT_NAME} \
-	$${COMPOSER_AUTH}'
+	$${COMPOSER_AUTH} \
+	$${HOST_UID} \
+	$${HOST_GID}'
 
 #
 # Self documenting Makefile code
@@ -90,9 +98,9 @@ help: ## Show this menu
 	@echo
 	@echo '    📑 Logs are stored in      $(MAKE_LOGFILE)'
 	@echo
-	@echo '    📦 Package                 laravel-package-tpl (github.com/wayofdev/laravel-package-tpl)'
-	@echo '    🤠 Author                  Andrij Orlenko (github.com/lotyp)'
-	@echo '    🏢 ${YELLOW}Org                     wayofdev (github.com/wayofdev)${RST}'
+	@echo '    📦 Package                 laravel-package-tpl (https://github.com/wayofdev/laravel-package-tpl)'
+	@echo '    🤠 Author                  Andrij Orlenko (https://github.com/lotyp)'
+	@echo '    🏢 ${YELLOW}Org                     wayofdev (https://github.com/wayofdev)${RST}'
 	@echo
 .PHONY: help
 
@@ -121,7 +129,7 @@ else
 endif
 .PHONY: env
 
-prepare:
+prepare: ## Prepare project for development
 	mkdir -p .build/php-cs-fixer
 .PHONY: prepare
 
@@ -135,6 +143,10 @@ up: # Creates and starts containers, defined in docker-compose and override file
 down: # Stops and removes containers of this project
 	$(DOCKER_COMPOSE) down --remove-orphans --volumes
 .PHONY: down
+
+stop: ## Stops all containers, without removing them
+	$(DOCKER_COMPOSE) stop
+.PHONY: stop
 
 restart: down up ## Runs down and up commands
 .PHONY: restart
@@ -171,7 +183,7 @@ update: ## Updates composer dependencies by running composer update command
 .PHONY: update
 
 phive: ## Installs dependencies with phive
-	$(APP_RUNNER) /usr/local/bin/phive install --trust-gpg-keys 0x033E5F8D801A2F8D
+	$(APP_RUNNER) /usr/local/bin/phive install --trust-gpg-keys 0xC00543248C87FB13,0x033E5F8D801A2F8D
 .PHONY: phive
 
 #
@@ -241,7 +253,7 @@ lint-deps: ## Runs composer-require-checker – checks for dependencies that are
 .PHONY: lint-deps
 
 lint-composer: ## Normalize composer.json and composer.lock files
-	$(APP_COMPOSER) normalize
+	$(APP_RUNNER) .phive/composer-normalize normalize
 .PHONY: lint-composer
 
 lint-audit: ## Runs security checks for composer dependencies
@@ -263,9 +275,16 @@ infect-ci: ## Runs infection – mutation testing framework with github output (
 	$(APP_COMPOSER) infect:ci
 .PHONY: lint-infect-ci
 
-test: ## Run project php-unit and pest tests
+test: test-unit test-arch ## Run project php-unit and pest tests
+.PHONY: test
+
+test-unit: ## Run project php-unit tests
 	$(APP_COMPOSER) test
 .PHONY: test
+
+test-arch: ## Run project pest tests with architecture checks
+	$(APP_COMPOSER) test:arch
+.PHONY: test-arch
 
 test-cc: ## Run project php-unit and pest tests in coverage mode and build report
 	$(APP_COMPOSER) test:cc
@@ -274,26 +293,6 @@ test-cc: ## Run project php-unit and pest tests in coverage mode and build repor
 #
 # Release
 # ------------------------------------------------------------------------------------
-commit:
+commit: ## Run commitizen to create commit message
 	czg commit --config="./.github/.cz.config.js"
 .PHONY: commit
-
-#
-# Documentation
-# Only in case, when `./docs` folder exists and has package.json
-# ------------------------------------------------------------------------------------
-docs-deps-update: ## Check for outdated dependencies and automatically update them using pnpm
-	cd docs && $(NPM_RUNNER) run deps:update
-.PHONY: docs-deps-update
-
-docs-deps-install: ## Install dependencies for documentation using pnpm
-	cd docs && $(NPM_RUNNER) install
-.PHONY: docs-deps-install
-
-docs-up: ## Start documentation server
-	cd docs && $(NPM_RUNNER) dev
-.PHONY: docs-up
-
-docs-build: ## Build documentation
-	cd docs && $(NPM_RUNNER) build
-.PHONY: docs-up

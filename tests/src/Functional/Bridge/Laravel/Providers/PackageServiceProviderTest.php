@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace WayOfDev\Tests\Bridge\Laravel\Providers;
+namespace WayOfDev\Tests\Functional\Bridge\Laravel\Providers;
 
 use PHPUnit\Framework\Attributes\Test;
 use WayOfDev\Package\Bridge\Laravel\Providers\PackageServiceProvider;
-use WayOfDev\Tests\TestCase;
+use WayOfDev\Tests\Functional\TestCase;
 
 class PackageServiceProviderTest extends TestCase
 {

@@ -5,7 +5,6 @@ extends: default
 ignore: |
   .build/
   vendor/
-  docs/
 
 rules:
   braces:

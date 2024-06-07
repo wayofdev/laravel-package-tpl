@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace WayOfDev\Tests;
+namespace WayOfDev\Tests\Functional;
 
 use Faker\Factory as FakerFactory;
 use Faker\Generator;
