@@ -19,7 +19,10 @@
     <projectFiles>
         <directory name="config/"/>
         <directory name="src/"/>
-        <directory name="tests/"/>
+        <directory name="tests/src/"/>
+        <ignoreFiles>
+            <directory name="tests/src/Arch/"/>
+        </ignoreFiles>
         <file name=".php-cs-fixer.dist.php"/>
         <file name="rector.php"/>
     </projectFiles>
