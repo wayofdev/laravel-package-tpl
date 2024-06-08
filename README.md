@@ -51,7 +51,7 @@ This template repository includes several features to streamline the development
 ### → Testing
 
 - Configured [PHPUnit](https://phpunit.de/index.html) for unit testing.
-- Integrated [Pest PHP](https://pestphp.com) for elegant testing.
+- Integrated [Pest PHP](https://pestphp.com) for elegant console support and architecture testing.
 - [Orchestra Testbench](https://packages.tools/testbench.html) for Laravel package testing.
 - [PHPStan](https://phpstan.org) extensions for PHPUnit and Laravel.
 - Infection for mutation testing to ensure quality.
@@ -67,8 +67,11 @@ This template repository includes several features to streamline the development
 
 ### → Coding Standards
 
-- [PHP CS Fixer](https://github.com/wayofdev/php-cs-fixer-config) with custom configuration for consistent code style.
+- [PHP CS Fixer Config](https://github.com/wayofdev/php-cs-fixer-config) with custom configuration for consistent code style.
 - [Composer Normalize](https://github.com/ergebnis/composer-normalize) to ensure a consistent `composer.json` format.
+- [Yamllint](https://github.com/adrienverge/yamllint) for YAML file linting.
+- [Actionlint](https://github.com/rhysd/actionlint) for GitHub Actions workflow linting.
+- [Markdownlint](https://github.com/DavidAnson/markdownlint-cli2) for Markdown file linting.
 
 ### → Continuous Integration
 
@@ -97,6 +100,7 @@ This template repository includes several features to streamline the development
 
 - Support for PHP 8.2+ and Laravel 10.x/11.x.
 - Configured `autoload` and `autoload-dev` for optimal namespace management.
+- PHAR dependencies managed using [Phive](https://phar.io/).
 
 <br>
 
