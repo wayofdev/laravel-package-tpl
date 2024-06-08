@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.7.3](https://github.com/wayofdev/laravel-package-tpl/compare/v2.7.2...v2.7.3) (2024-06-08)
+
+
+### Documentation
+
+* readme updates ([a22e2c5](https://github.com/wayofdev/laravel-package-tpl/commit/a22e2c5d76c128ef9ac4b96542d13fc537341fc8))
+* update CONTRIBUTING guidelines ([4a5089f](https://github.com/wayofdev/laravel-package-tpl/commit/4a5089fc8c387fd2021cb988afe9362c1fe9f27e))
+
+
+### Code Refactoring
+
+* clean-up project structure ([2d9011d](https://github.com/wayofdev/laravel-package-tpl/commit/2d9011d6f68abfc719634e75e3f81218b8840334))
+
 ## [2.7.2](https://github.com/wayofdev/laravel-package-tpl/compare/v2.7.1...v2.7.2) (2024-04-28)
 
 
