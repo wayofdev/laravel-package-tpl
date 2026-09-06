@@ -3157,12 +3157,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -3380,12 +3380,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -3881,8 +3881,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -3957,8 +3957,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -4119,8 +4119,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -4203,8 +4203,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -4350,8 +4350,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -4430,8 +4430,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -4731,12 +4731,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -4990,12 +4990,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -5639,53 +5639,52 @@
         },
         {
             "name": "barryvdh/laravel-ide-helper",
-            "version": "v3.1.0",
+            "version": "v3.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-ide-helper.git",
-                "reference": "591e7d665fbab8a3b682e451641706341573eb80"
+                "reference": "8d441ec99f8612b942b55f5183151d91591b618a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/591e7d665fbab8a3b682e451641706341573eb80",
-                "reference": "591e7d665fbab8a3b682e451641706341573eb80",
+                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/8d441ec99f8612b942b55f5183151d91591b618a",
+                "reference": "8d441ec99f8612b942b55f5183151d91591b618a",
                 "shasum": ""
             },
             "require": {
-                "barryvdh/reflection-docblock": "^2.1.1",
+                "barryvdh/reflection-docblock": "^2.3",
                 "composer/class-map-generator": "^1.0",
                 "ext-json": "*",
-                "illuminate/console": "^10 || ^11",
-                "illuminate/database": "^10.38 || ^11",
-                "illuminate/filesystem": "^10 || ^11",
-                "illuminate/support": "^10 || ^11",
-                "nikic/php-parser": "^4.18 || ^5",
-                "php": "^8.1",
-                "phpdocumentor/type-resolver": "^1.1.0"
+                "illuminate/console": "^11.15 || ^12",
+                "illuminate/database": "^11.15 || ^12",
+                "illuminate/filesystem": "^11.15 || ^12",
+                "illuminate/support": "^11.15 || ^12",
+                "php": "^8.2"
             },
             "require-dev": {
                 "ext-pdo_sqlite": "*",
                 "friendsofphp/php-cs-fixer": "^3",
-                "illuminate/config": "^9 || ^10 || ^11",
-                "illuminate/view": "^9 || ^10 || ^11",
+                "illuminate/config": "^11.15 || ^12",
+                "illuminate/view": "^11.15 || ^12",
                 "mockery/mockery": "^1.4",
-                "orchestra/testbench": "^8 || ^9",
-                "phpunit/phpunit": "^10.5",
+                "orchestra/testbench": "^9.2 || ^10",
+                "phpunit/phpunit": "^10.5 || ^11.5.3",
                 "spatie/phpunit-snapshot-assertions": "^4 || ^5",
-                "vimeo/psalm": "^5.4"
+                "vimeo/psalm": "^5.4",
+                "vlucas/phpdotenv": "^5"
             },
             "suggest": {
                 "illuminate/events": "Required for automatic helper generation (^6|^7|^8|^9|^10|^11)."
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "3.1-dev"
-                },
                 "laravel": {
                     "providers": [
                         "Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider"
                     ]
+                },
+                "branch-alias": {
+                    "dev-master": "3.5-dev"
                 }
             },
             "autoload": {
@@ -5707,6 +5706,7 @@
             "keywords": [
                 "autocomplete",
                 "codeintel",
+                "dev",
                 "helper",
                 "ide",
                 "laravel",
@@ -5717,7 +5717,7 @@
             ],
             "support": {
                 "issues": "https://github.com/barryvdh/laravel-ide-helper/issues",
-                "source": "https://github.com/barryvdh/laravel-ide-helper/tree/v3.1.0"
+                "source": "https://github.com/barryvdh/laravel-ide-helper/tree/v3.5.5"
             },
             "funding": [
                 {
@@ -5729,24 +5729,24 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-07-12T14:20:51+00:00"
+            "time": "2025-02-11T13:59:46+00:00"
         },
         {
             "name": "barryvdh/reflection-docblock",
-            "version": "v2.1.1",
+            "version": "v2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/ReflectionDocBlock.git",
-                "reference": "e6811e927f0ecc37cc4deaa6627033150343e597"
+                "reference": "4f5ba70c30c81f2ce03a16a9965832cfcc31ed3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/ReflectionDocBlock/zipball/e6811e927f0ecc37cc4deaa6627033150343e597",
-                "reference": "e6811e927f0ecc37cc4deaa6627033150343e597",
+                "url": "https://api.github.com/repos/barryvdh/ReflectionDocBlock/zipball/4f5ba70c30c81f2ce03a16a9965832cfcc31ed3b",
+                "reference": "4f5ba70c30c81f2ce03a16a9965832cfcc31ed3b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=7.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^8.5.14|^9"
@@ -5758,7 +5758,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "2.3.x-dev"
                 }
             },
             "autoload": {
@@ -5779,9 +5779,9 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/barryvdh/ReflectionDocBlock/tree/v2.1.1"
+                "source": "https://github.com/barryvdh/ReflectionDocBlock/tree/v2.4.1"
             },
-            "time": "2023-06-14T05:06:27+00:00"
+            "time": "2026-03-05T20:09:01+00:00"
         },
         {
             "name": "brianium/paratest",
@@ -6176,6 +6176,7 @@
                     "type": "tidelift"
                 }
             ],
+            "abandoned": true,
             "time": "2022-01-17T14:14:24+00:00"
         },
         {
@@ -6205,13 +6206,13 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "3.x-dev"
-                },
                 "phpstan": {
                     "includes": [
                         "extension.neon"
                     ]
+                },
+                "branch-alias": {
+                    "dev-main": "3.x-dev"
                 }
             },
             "autoload": {
@@ -9984,20 +9985,20 @@
         },
         {
             "name": "psalm/plugin-laravel",
-            "version": "v2.11.0",
+            "version": "v2.12.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/psalm/psalm-plugin-laravel.git",
-                "reference": "ffd51399b672959331ed3ef4eaae13984474e2f0"
+                "reference": "f1c56d04b162abede17907da75bc468d2bc093ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/psalm/psalm-plugin-laravel/zipball/ffd51399b672959331ed3ef4eaae13984474e2f0",
-                "reference": "ffd51399b672959331ed3ef4eaae13984474e2f0",
+                "url": "https://api.github.com/repos/psalm/psalm-plugin-laravel/zipball/f1c56d04b162abede17907da75bc468d2bc093ec",
+                "reference": "f1c56d04b162abede17907da75bc468d2bc093ec",
                 "shasum": ""
             },
             "require": {
-                "barryvdh/laravel-ide-helper": "^2.13 || ^3.0",
+                "barryvdh/laravel-ide-helper": "^2.15 || >=3.4.0 <3.6",
                 "ext-simplexml": "*",
                 "illuminate/config": "^10.48 || ^11.0",
                 "illuminate/container": "^10.48 || ^11.0",
@@ -10013,7 +10014,7 @@
                 "php": "^8.1",
                 "symfony/console": "^6.0 || ^7.0",
                 "symfony/finder": "^6.0 || ^7.0",
-                "vimeo/psalm": "^5.20"
+                "vimeo/psalm": "^5.20 || ^6"
             },
             "require-dev": {
                 "laravel/framework": "^10.48 || ^11.0",
@@ -10048,11 +10049,23 @@
             ],
             "description": "Psalm plugin for Laravel",
             "homepage": "https://github.com/psalm/psalm-plugin-laravel",
+            "keywords": [
+                "dev",
+                "laravel",
+                "psalm",
+                "psalm-plugin"
+            ],
             "support": {
                 "issues": "https://github.com/psalm/psalm-plugin-laravel/issues",
-                "source": "https://github.com/psalm/psalm-plugin-laravel/tree/v2.11.0"
+                "source": "https://github.com/psalm/psalm-plugin-laravel/tree/v2.12.3"
             },
-            "time": "2024-03-19T21:40:03+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/alies-dev",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-05-23T17:37:45+00:00"
         },
         {
             "name": "psalm/plugin-phpunit",
@@ -13302,15 +13315,15 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.2.17"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
